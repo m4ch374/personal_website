@@ -15,6 +15,7 @@ const Home: NextPage = () => {
                 
       <main>
         <MenuBar />
+
         <MainBody />
       </main>
     </div>
