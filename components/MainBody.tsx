@@ -5,8 +5,8 @@ import Paragraph from "./Paragraph"
 const MainBody: React.FC = () => {
   return (
     <div className="py-4 w-[50vw] min-w-full grid grid-flow-row place-items-center">
-      <div className="flex flex-col gap-6">
-        <Intro imagePath="/funni_anya.png" className="place-items-center" />
+      <div className="flex flex-col gap-10">
+        <Intro imagePath="/funni_anya.png" className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
           Anya is a short young girl with fair skin and green eyes. 
