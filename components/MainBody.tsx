@@ -1,10 +1,11 @@
 import React from "react"
 import Intro from "./Intro"
+import MyButton from "./MyButton"
 import Paragraph from "./Paragraph"
 
 const MainBody: React.FC = () => {
   return (
-    <div className="py-4 w-[50vw] min-w-full grid grid-flow-row place-items-center">
+    <div className="pt-4 pb-[100px] w-[50vw] min-w-full grid grid-flow-row place-items-center">
       <div className="flex flex-col gap-10">
         <Intro imagePath="/funni_anya.png" className="place-items-center pt-[70px]" />
 
@@ -18,15 +19,19 @@ const MainBody: React.FC = () => {
           Damian and his friends direct at her target her small size. 
         </Paragraph>
 
+        <div className="text-center">
+          <MyButton> My Profile! </MyButton>
+        </div>
+
         <Paragraph title="What I do">
-        Anya's true origins, as well as the source of her telepathic abilities, 
-        are largely unclear. Prior to being found at the orphanage, 
-        she was made by accident, as an unintended consequence of research experiments 
-        conducted by an unknown organization. 
-        She had the code name 'Test Subject "007"' 
-        and was treated very strictly by the scientists, 
-        not being allowed to play and forced to learn how to use her powers, 
-        seemingly for the sake of world peace.
+          Anya's true origins, as well as the source of her telepathic abilities, 
+          are largely unclear. Prior to being found at the orphanage, 
+          she was made by accident, as an unintended consequence of research experiments 
+          conducted by an unknown organization. 
+          She had the code name 'Test Subject "007"' 
+          and was treated very strictly by the scientists, 
+          not being allowed to play and forced to learn how to use her powers, 
+          seemingly for the sake of world peace.
         </Paragraph>
       </div>
     </div>
