@@ -1,6 +1,6 @@
 import React from "react"
 import Intro from "./Intro"
-import MyButton from "./MyButton"
+import MyButton from "./LinkButton"
 import Paragraph from "./Paragraph"
 
 const MainBody: React.FC = () => {
