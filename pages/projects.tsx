@@ -21,11 +21,9 @@ const Projects: NextPage = () => {
           <Image src="/mountain.png" layout="fill" />
         </div>
 
-        <div className="flex flex-col gap-10">
-          <Paragraph title="Personal & University Projects">
-            This is something
-          </Paragraph>
-        </div>
+        <Paragraph title="Personal & University Projects">
+          This is something
+        </Paragraph>
       </ContentContainer>
     </div>
   )
