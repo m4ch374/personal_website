@@ -34,10 +34,6 @@ const MainBody: React.FC = () => {
           not being allowed to play and forced to learn how to use her powers, 
           seemingly for the sake of world peace.
         </Paragraph>
-
-        <Paragraph title="Personal & University Projects" className="">
-          This is something
-        </Paragraph>
       </div>
     </ContentContainer>
   )
