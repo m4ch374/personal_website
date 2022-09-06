@@ -1,5 +1,35 @@
 import React from "react";
 
+interface IMenuBarBtn {
+  children?: string | JSX.Element,
+  className?: string
+}
+
+const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className}) => {
+  return (
+    <a className={`cursor-pointer 
+        relative 
+        pb-1
+        ${className} 
+        after:absolute 
+        after:w-[100%] 
+        after:h-[2px]
+        after:bottom-0 
+        after:left-0 
+        after:bg-purple-700
+        after:origin-bottom-right 
+        after:scale-x-0 
+        after:transition-transform
+        after:duration-[200ms] 
+        hover:after:scale-x-100 
+        hover:after:origin-bottom-left
+        `
+      }>
+        {children}
+    </a>
+  )
+}
+
 const MenuBar: React.FC = () => {
   return (
     <div className="backdrop-blur-[8px]
@@ -15,9 +45,9 @@ const MenuBar: React.FC = () => {
         w-[100%]
         z-[10000]"
       >
-        <a className="font-bold"> Anya Forger </a>
-        <a className="ml-14"> Projects </a>
-      <a> Source </a>
+        <a className="font-bold cursor-pointer"> Anya Forger </a>
+        <MenuBarBtn className="ml-14"> Projects </MenuBarBtn>
+        <MenuBarBtn> Source </MenuBarBtn>
     </div>
   )
 }
