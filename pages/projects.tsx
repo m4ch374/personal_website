@@ -4,6 +4,7 @@ import ContentContainer from "../components/ContentContainer";
 import MenuBar from "../components/MenuBar";
 import Paragraph from "../components/Paragraph";
 import Image from "next/image";
+import LinkButton from "../components/LinkButton";
 
 const Projects: NextPage = () => {
   return (
@@ -22,8 +23,14 @@ const Projects: NextPage = () => {
         </div>
 
         <Paragraph title="Personal & University Projects">
-          This is something
+          These are the Personal & University Projects. As much as I would love to provide 
+          source code for every project that I've made, I'm unable to provide code for university 
+          projects as UNSW does not allow it.
         </Paragraph>
+        
+        <LinkButton> Github Page </LinkButton>
+
+        <hr className="w-[90vw] lg:w-[900px] border-gray-600/80" />
       </ContentContainer>
     </div>
   )
