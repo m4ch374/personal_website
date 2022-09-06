@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <title>Henry's website</title>
         <meta name="description" content="Henry's personal website" />
         <link rel="icon" href="/favicon.ico" />
-        <link href="http://fonts.cdnfonts.com/css/umunu" rel="stylesheet" />
       </Head>
                 
       <main>

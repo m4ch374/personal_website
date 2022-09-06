@@ -1,32 +1,36 @@
+import Link from "next/link";
 import React from "react";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
-  className?: string
+  className?: string,
+  href?: string
 }
 
-const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className}) => {
+const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/"}) => {
   return (
-    <a className={`cursor-pointer 
-        relative 
-        pb-1
-        ${className} 
-        after:absolute 
-        after:w-[100%] 
-        after:h-[2px]
-        after:bottom-0 
-        after:left-0 
-        after:bg-purple-600 
-        after:origin-bottom-right 
-        after:scale-x-0 
-        after:transition-transform
-        after:duration-[200ms] 
-        hover:after:scale-x-100 
-        hover:after:origin-bottom-left
-        `
-      }>
-        {children}
-    </a>
+    <Link href={href}>
+      <a className={`cursor-pointer 
+          relative 
+          pb-1
+          ${className} 
+          after:absolute 
+          after:w-[100%] 
+          after:h-[2px]
+          after:bottom-0 
+          after:left-0 
+          after:bg-purple-600 
+          after:origin-bottom-right 
+          after:scale-x-0 
+          after:transition-transform
+          after:duration-[200ms] 
+          hover:after:scale-x-100 
+          hover:after:origin-bottom-left
+          `
+        }>
+          {children}
+      </a>
+    </Link>
   )
 }
 
@@ -47,8 +51,10 @@ const MenuBar: React.FC = () => {
         w-[100%]
         z-[10000]"
       >
-        <a className="font-bold cursor-pointer"> Anya Forger </a>
-        <MenuBarBtn className="ml-14"> Projects </MenuBarBtn>
+        <Link href="/"> 
+          <a className="font-bold cursor-pointer"> Anya Forger </a> 
+        </Link>
+        <MenuBarBtn className="ml-14" href="/projects"> Projects </MenuBarBtn>
         <MenuBarBtn> Source </MenuBarBtn>
     </div>
   )
