@@ -6,8 +6,7 @@ import Paragraph from "./Paragraph"
 
 const MainBody: React.FC = () => {
   return (
-    <ContentContainer>
-      <div className="flex flex-col gap-10">
+    <ContentContainer className="gap-10">
         <Intro imagePath="/funni_anya.png" className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
@@ -34,7 +33,6 @@ const MainBody: React.FC = () => {
           not being allowed to play and forced to learn how to use her powers, 
           seemingly for the sake of world peace.
         </Paragraph>
-      </div>
     </ContentContainer>
   )
 }
