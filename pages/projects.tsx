@@ -1,6 +1,9 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import ContentContainer from "../components/ContentContainer";
 import MenuBar from "../components/MenuBar";
+import Paragraph from "../components/Paragraph";
+import Intro from "../components/Intro";
 
 const Projects: NextPage = () => {
   return (
@@ -13,9 +16,13 @@ const Projects: NextPage = () => {
 
       <MenuBar />
 
-      <div className="pt-[100px]">
-        <span className="text-7xl"> Hello world </span>
-      </div>
+      <ContentContainer>
+        <div className="flex flex-col gap-10">
+          <Paragraph title="Personal & University Projects" className="pt-[80px]">
+            This is something
+          </Paragraph>
+        </div>
+      </ContentContainer>
     </div>
   )
 }

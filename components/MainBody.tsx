@@ -1,11 +1,12 @@
 import React from "react"
+import ContentContainer from "./ContentContainer"
 import Intro from "./Intro"
 import MyButton from "./LinkButton"
 import Paragraph from "./Paragraph"
 
 const MainBody: React.FC = () => {
   return (
-    <div className="pt-4 pb-[100px] w-[50vw] min-w-full grid grid-flow-row place-items-center">
+    <ContentContainer>
       <div className="flex flex-col gap-10">
         <Intro imagePath="/funni_anya.png" className="place-items-center pt-[70px]" />
 
@@ -33,8 +34,12 @@ const MainBody: React.FC = () => {
           not being allowed to play and forced to learn how to use her powers, 
           seemingly for the sake of world peace.
         </Paragraph>
+
+        <Paragraph title="Personal & University Projects" className="">
+          This is something
+        </Paragraph>
       </div>
-    </div>
+    </ContentContainer>
   )
 }
 
