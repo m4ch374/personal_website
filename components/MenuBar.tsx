@@ -16,7 +16,7 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className}) => {
         after:h-[2px]
         after:bottom-0 
         after:left-0 
-        after:bg-purple-700
+        after:bg-purple-600 
         after:origin-bottom-right 
         after:scale-x-0 
         after:transition-transform
@@ -32,7 +32,9 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className}) => {
 
 const MenuBar: React.FC = () => {
   return (
-    <div className="backdrop-blur-[8px]
+    <div className="backdrop-blur-[20px] 
+        bg-[#121212]
+        bg-opacity-50 
         grid 
         grid-rows-1 
         px-[8%] 
