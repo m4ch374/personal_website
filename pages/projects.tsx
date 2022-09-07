@@ -22,7 +22,7 @@ const Projects: NextPage = () => {
         </div>
 
         <Paragraph title="Personal & University Projects">
-          These are the Personal & University Projects. As much as I would love to provide 
+          These are my Personal & University Projects. As much as I would love to provide 
           source code for every project that I've made, I'm unable to provide code for university 
           projects as UNSW does not allow it.
         </Paragraph>

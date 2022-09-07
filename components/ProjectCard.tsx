@@ -14,7 +14,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped}) => {
       h-[100%] 
       backdrop-blur-[20px] 
       bg-[#1C1C1C] 
-      bg-opacity-50 
+      bg-opacity-30 
       z-[1000]
       flex
       items-center
@@ -40,7 +40,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped}) => {
                   <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
                   <span> Python, something, something else, another thing </span>
                 </div>
-                <LinkButton className="absolute bottom-8 right-0"> Github page </LinkButton>
+                <LinkButton className="absolute bottom-8 right-0"> Source &rarr; </LinkButton>
               </div>
             </div>
             
