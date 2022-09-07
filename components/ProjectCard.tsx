@@ -6,13 +6,22 @@ interface IProjectDetails {
 
 const ProjectDetails: React.FC<IProjectDetails> = ({setPopped}) => {
   return (
-    <div className="absolute top-0 left-0 w-[100%] h-[100%] backdrop-blur-[20px] bg-[#1C1C1C] bg-opacity-50 z-[1000]"
+    <div className="absolute 
+      top-0 
+      left-0 
+      w-[100%] 
+      h-[100%] 
+      backdrop-blur-[20px] 
+      bg-[#1C1C1C] 
+      bg-opacity-50 
+      z-[1000]
+      flex
+      items-center
+      justify-center"
       onClick={() => setPopped(false)}>
-      <div className="flex h-screen items-center justify-center">
         <div onClick={e => e.stopPropagation()}>
           something
         </div>
-      </div>
     </div>
   )
 }
