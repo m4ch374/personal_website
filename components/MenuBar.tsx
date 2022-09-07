@@ -1,31 +1,43 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
   className?: string,
-  href?: string
+  href?: string,
+  id?: string
 }
 
-const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/"}) => {
+const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""}) => {
+  const router = useRouter()
+  const currPath = router.pathname
+
+  const isFocused = id === currPath
+
+  const unfocusedStyle = `after:absolute 
+                          after:w-[100%] 
+                          after:h-[2px]
+                          after:bottom-0 
+                          after:left-0 
+                          after:bg-purple-600 
+                          after:origin-bottom-right 
+                          after:scale-x-0 
+                          after:transition-transform
+                          after:duration-[200ms] 
+                          hover:after:scale-x-100 
+                          hover:after:origin-bottom-left`
+
+  const focusedStyle = `bg-purple-500 rounded-lg`
+
   return (
     <Link href={href}>
       <a className={`cursor-pointer 
           relative 
-          pb-1
+          py-2
+          px-3
           ${className} 
-          after:absolute 
-          after:w-[100%] 
-          after:h-[2px]
-          after:bottom-0 
-          after:left-0 
-          after:bg-purple-600 
-          after:origin-bottom-right 
-          after:scale-x-0 
-          after:transition-transform
-          after:duration-[200ms] 
-          hover:after:scale-x-100 
-          hover:after:origin-bottom-left
+          ${isFocused ? focusedStyle : unfocusedStyle}
           `
         }>
           {children}
@@ -52,9 +64,9 @@ const MenuBar: React.FC = () => {
         z-[10000]"
       >
         <Link href="/"> 
-          <a className="font-bold cursor-pointer"> Anya Forger </a> 
+          <a className="font-bold cursor-pointer py-2"> Anya Forger </a> 
         </Link>
-        <MenuBarBtn className="ml-14" href="/projects"> Projects </MenuBarBtn>
+        <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
         <MenuBarBtn> Source </MenuBarBtn>
     </div>
   )
