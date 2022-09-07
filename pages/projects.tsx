@@ -14,9 +14,7 @@ const Projects: NextPage = () => {
         <meta name="Description" content="Personal and University projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <MenuBar />
-
+      
       <ContentContainer className="gap-10">
         <div className="mt-[80px] relative w-[500px] h-[300px] md:h-[350px] md:w-[600px]">
           <Image src="/mountain.png" layout="fill" />

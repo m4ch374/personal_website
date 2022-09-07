@@ -2,7 +2,7 @@ import React from "react";
 
 interface IParagraph {
   title: string,
-  children?: string,
+  children?: string | JSX.Element | JSX.Element[],
   className?: string
 }
 
