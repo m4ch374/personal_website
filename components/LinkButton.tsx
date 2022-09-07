@@ -2,12 +2,13 @@ import React from "react";
 
 interface ILinkButton {
   children?: string,
-  href?: string
+  href?: string,
+  className?: string
 }
 
-const MyButton: React.FC<ILinkButton> = ({ children, href }) => {
+const MyButton: React.FC<ILinkButton> = ({ children, href, className }) => {
   return (
-    <div>
+    <div className={className}>
       <a className="text-3xl 
         bg-purple-400 
         cursor-pointer 

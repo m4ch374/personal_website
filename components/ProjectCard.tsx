@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LinkButton from "./LinkButton"
 
 interface IProjectDetails {
   setPopped: Function
@@ -20,7 +21,30 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped}) => {
       justify-center"
       onClick={() => setPopped(false)}>
         <div onClick={e => e.stopPropagation()}>
-          something
+          <div className="flex w-[500px] aspect-[3/4] flex-col lg:flex-row lg:w-[850px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden">
+            <div className="bg-[url('/lol3.png')] w-[500px] aspect-[5/2] bg-cover lg:w-[320px] lg:aspect-[3/5] lg:bg-center" />
+            <div className="h-full relative flex-grow mr-8">
+              <div className="p-8 text-slate-800 grid grid-flow-row gap-2">
+                <span className="text-4xl font-bold"> &#181;sick Bot </span>
+                <span className="text-2xl"> A Discord music bot written in python. </span>
+                <hr className="border-gray-400/80" />
+                <div>
+                  <span className="text-2xl"> Features: </span>
+                  <ul className="list-disc pl-[30px] text-xl">
+                    <li> something </li>
+                    <li> another thing </li>
+                    <li> another place holder lol </li>
+                  </ul>
+                </div>
+                <div className="absolute bottom-32 flex flex-row text-xl gap-4">
+                  <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
+                  <span> Python, something, something else, another thing </span>
+                </div>
+                <LinkButton className="absolute bottom-8 right-0"> Github page </LinkButton>
+              </div>
+            </div>
+            
+          </div>
         </div>
     </div>
   )
