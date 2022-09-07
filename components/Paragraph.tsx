@@ -8,7 +8,7 @@ interface IParagraph {
 
 const Paragraph: React.FC<IParagraph> = ({title, children, className}) => {
   return (
-    <div className={`min-w-0 sm:w-[100vw] lg:w-[1000px] px-[100px] grid grid-flow-row ${className}`}>
+    <div className={`min-w-0 sm:w-[90vw] lg:w-[1000px] px-[100px] grid grid-flow-row ${className}`}>
       <span className="text-4xl 
             font-bold underline 
             decoration-slate-400/50 
