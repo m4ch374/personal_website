@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "./Section";
 
 interface IParagraph {
   title: string,
@@ -8,7 +9,7 @@ interface IParagraph {
 
 const Paragraph: React.FC<IParagraph> = ({title, children, className}) => {
   return (
-    <div className={`min-w-0 sm:w-[90vw] lg:w-[1000px] px-[100px] grid grid-flow-row ${className}`}>
+    <Section className={className}>
       <span className="text-4xl 
             font-bold underline 
             decoration-slate-400/50 
@@ -17,8 +18,8 @@ const Paragraph: React.FC<IParagraph> = ({title, children, className}) => {
           > 
             {title} 
       </span>
-      <span className="pt-2 text-2xl"> {children} </span>
-    </div>
+      <div className="pt-2 text-2xl"> {children} </div>
+    </Section>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Section from "./Section";
 
 interface IIntro {
   imagePath?: string,
@@ -8,13 +9,13 @@ interface IIntro {
 
 const Intro: React.FC<IIntro> = ({ imagePath = "/funni_anya.png", className="" }) => {
   return (
-    <div className={`grid grid-cols-1 place-items-start gap-8 ${className}`}>
+    <Section className={className}>
       <Image src={imagePath} width="250px" height="250px" className="rounded-full" />
       <div className="grid grid-cols-1 place-items-start gap-1">
         <span className="text-6xl font-bold"> Anya Forger </span>
         <span className="text-3xl"> Daughter of the Forger family </span>
       </div>
-    </div>
+    </Section>
   )
 }
 
