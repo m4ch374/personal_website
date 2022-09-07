@@ -34,7 +34,7 @@ const Projects: NextPage = () => {
         <Section>
           <span className="text-3xl"> Personal Projects </span>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center pt-4">
             <ProjectCard />
           </div>
         </Section>

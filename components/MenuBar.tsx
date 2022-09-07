@@ -61,7 +61,7 @@ const MenuBar: React.FC = () => {
         gap-6 
         fixed 
         w-[100%]
-        z-[10000]"
+        z-[100]"
       >
         <Link href="/"> 
           <a className="font-bold cursor-pointer py-2"> Anya Forger </a> 
