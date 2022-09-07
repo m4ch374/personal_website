@@ -36,8 +36,10 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped}) => {
                     <li> another place holder lol </li>
                   </ul>
                 </div>
-                <div className="absolute bottom-32 flex flex-row text-xl gap-4">
-                  <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
+                <div className="absolute bottom-32 text-xl gap-4 inline-flex">
+                  <div>
+                    <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
+                  </div>
                   <span> Python, something, something else, another thing </span>
                 </div>
                 <LinkButton className="absolute bottom-8 right-0"> Source &rarr; </LinkButton>
