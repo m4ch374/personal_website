@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Henry's website</title>
+        <title>Henry&apos;s website</title>
         <meta name="description" content="Henry's personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -22,13 +22,13 @@ const Home: NextPage = () => {
           I am a Computer Science student at UNSW. With a passion in coding and programming,
           I had worked as a programming tutor teaching basic C programming to high school students, it was 
           a fun experience! 
-          I've also completed numerous personal projects in my free time, and also had a good score 
+          I&apos;ve also completed numerous personal projects in my free time, and also had a good score 
           in the university projects.
 
           <br /><br />
 
-          Apart from coding, I also like to cook and play guitar as I'm not a Certified Grass Toucher&trade;.
-          And yes, the photo has me wearing mask cuz I'm a shy person.
+          Apart from coding, I also like to cook and play guitar as I&apos;m not a Certified Grass Toucher&trade;.
+          And yes, the photo has me wearing mask cuz I&apos;m a shy person.
         </Paragraph>
 
         <div className="text-center">
@@ -60,11 +60,11 @@ const Home: NextPage = () => {
         <hr className='w-[55vw] border-gray-600/80' />
 
         <div className='flex flex-row place-items-center gap-10'>
-          <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" className='w-[50px] h-[50px]'>
+          <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
             <div className="bg-[url('/linkedinicon.svg')] w-[50px] h-[50px] invert" />
           </a>
 
-          <a href='https://github.com/m4ch374' target="_blank" className='w-[50px] h-[50px]'>
+          <a href='https://github.com/m4ch374' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
             <div className="bg-[url('/githubicon.svg')] w-[50px] h-[50px] invert bg-cover" />
           </a>
         </div>

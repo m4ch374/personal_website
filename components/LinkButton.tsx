@@ -19,6 +19,7 @@ const MyButton: React.FC<ILinkButton> = ({ children, href, className }) => {
         hover:bg-purple-500"
         href={href} 
         target="_blank"
+        rel="noreferrer"
         >
           {children}
       </a>

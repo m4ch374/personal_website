@@ -22,12 +22,12 @@ const Projects: NextPage = () => {
       
       <ContentContainer className="gap-10">
         <div className="mt-[80px] relative w-[500px] h-[300px] md:h-[350px] md:w-[600px]">
-          <Image src="/mountain.png" layout="fill" />
+          <Image src="/mountain.png" property="mountain" layout="fill" />
         </div>
 
         <Paragraph title="Personal & University Projects">
           These are my Personal & University Projects. As much as I would love to provide 
-          source code for every project that I've made, I'm unable to provide code for university 
+          source code for every project that I&apos;ve made, I&apos;m unable to provide code for university 
           projects as UNSW does not allow it.
         </Paragraph>
         
@@ -39,7 +39,7 @@ const Projects: NextPage = () => {
           <span className="text-3xl"> Personal Projects </span>
 
           <div className="flex justify-center pt-4 gap-10 flex-wrap">
-            { projectsArray.map((proj: ProjectMeta) => <ProjectCard projectDetail={proj} />) }
+            { projectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
           </div>
         </Section>
 
@@ -47,7 +47,7 @@ const Projects: NextPage = () => {
           <span className="text-3xl"> University Projects </span>
 
           <div className="flex justify-center pt-4 gap-10 flex-wrap">
-            { uniProjectsArray.map((proj: ProjectMeta) => <ProjectCard projectDetail={proj} />) }
+            { uniProjectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
           </div>
         </Section>
       </ContentContainer>
