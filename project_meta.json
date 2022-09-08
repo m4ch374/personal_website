@@ -1,0 +1,87 @@
+{
+    "personal_projects": [
+        {
+            "thumbnail": "/mu_sick.png",
+            "name": "\u03BCsick Bot",
+            "description": "A Discord music bot coded in Python using Discord API",
+            "features":[
+                "Play music from youtube",
+                "A queuing system",
+                "Other fun commands"
+            ],
+            "stack": [
+                "Python",
+                "Discord.py",
+                "FFmpeg",
+                "youtube-dl"
+            ],
+            "projectUrl": "https://github.com/m4ch374/mu_sick_bot"
+        },
+        {
+            "thumbnail": "/gta_cayo.png",
+            "name": "GTA Cayo ATM",
+            "description": "An application that exploits a bug found in GTA",
+            "features":[
+                "Cuts off GTA's access to the internet with a click of a button",
+                "Does not interfere with other application's acccess to the internet"
+            ],
+            "stack": [
+                "C#",
+                ".NET",
+                "Windows Forms",
+                "WindowsFirewallHelper"
+            ],
+            "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
+        },
+        {
+            "thumbnail": "/ascyee.png",
+            "name": "Ascyee",
+            "description": "Using Ascii characters to represent an image",
+            "features":[
+                "Convert an image to an Ascii art",
+                "I was bored....."
+            ],
+            "stack": [
+                "C",
+                "uhh... also C"
+            ],
+            "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
+        }
+    ],
+    "university_project": [
+        {
+            "thumbnail": "/dungeon.png",
+            "name": "Dungeon Mania",
+            "description": "A Backend for a web game called Dungeon Mania",
+            "features":[
+                "An interactive game",
+                "Different types of enemies, bosses",
+                "Users could customize the character models"
+            ],
+            "stack": [
+                "Java",
+                "Scintillia",
+                "JSON",
+                "GSON"
+            ],
+            "projectUrl": "N/A"
+        },
+        {
+            "thumbnail": "/seams.png",
+            "name": "UNSW Seams",
+            "description": "A backend for a chat webapp, basically a crappy Discord clone",
+            "features":[
+                "An online chatting platform",
+                "Group chats & DMs",
+                "Profile customisations & Metrics tracker"
+            ],
+            "stack": [
+                "Python",
+                "Flask",
+                "JWT",
+                "JSON"
+            ],
+            "projectUrl": "N/A"
+        }
+    ]
+}
