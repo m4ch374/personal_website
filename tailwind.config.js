@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        pop: 'pop 0.35s ease-in-out',
+        pop: 'pop 0.25s ease-in-out',
       },
       keyframes: {
         pop: {
           '0%': {
-            transform: 'scale(0)'
+            transform: 'scale(0.3)'
           },
-          '60%': {
+          '45%': {
             transform: 'scale(1.05)'
           },
           '100%': {
