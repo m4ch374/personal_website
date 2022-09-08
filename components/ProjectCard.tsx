@@ -23,7 +23,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       justify-center"
       onClick={() => setPopped(false)}>
         <div onClick={e => e.stopPropagation()}>
-          <div className="flex w-[500px] aspect-[3/4] flex-col lg:flex-row lg:w-[850px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden">
+          <div className="flex w-[500px] aspect-[3/4] flex-col lg:flex-row lg:w-[850px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden animate-pop">
             <div className="w-full aspect-[5/2] bg-cover lg:w-[320px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${projectMeta.thumbnail})`}} />
             <div className="h-full relative flex-grow mr-8">
               <div className="p-8 text-slate-800 grid grid-flow-row gap-2">
