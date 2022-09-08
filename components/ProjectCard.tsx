@@ -33,7 +33,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
                 <div>
                   <span className="text-2xl"> Features: </span>
                   <ul className="list-disc pl-[30px] text-xl font-sans">
-                    { projectMeta.features.map((feats: string) => <li key={feats}>{feats}</li>) }
+                    { projectMeta.features.map((feats: string) => <li key="key"> {feats} </li>) }
                   </ul>
                 </div>
                 <div className="absolute bottom-32 text-xl gap-4 inline-flex">
