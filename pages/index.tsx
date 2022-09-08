@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             Python, Java 
           </InlineSection>
 
-          <InlineSection title='Others' titleClassName='bg-purple-800/80 px-2 mr-10 rounded-md text-purple-200'>
+          <InlineSection title='Others' titleClassName='bg-purple-800/80 px-2 mr-[35px] rounded-md text-purple-200'>
             C, C#
           </InlineSection>
         </Paragraph>
