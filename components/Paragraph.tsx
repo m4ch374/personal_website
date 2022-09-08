@@ -3,7 +3,7 @@ import Section from "./Section";
 
 interface IParagraph {
   title: string,
-  children?: string | JSX.Element | JSX.Element[],
+  children?: React.ReactNode,
   className?: string
 }
 

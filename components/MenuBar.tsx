@@ -64,7 +64,7 @@ const MenuBar: React.FC = () => {
         z-[100]"
       >
         <Link href="/"> 
-          <a className="font-bold cursor-pointer py-2"> Anya Forger </a> 
+          <a className="font-bold cursor-pointer py-2"> Henry Wan </a> 
         </Link>
         <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
         <MenuBarBtn> Source </MenuBarBtn>

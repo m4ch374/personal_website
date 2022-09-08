@@ -31,7 +31,7 @@ const Projects: NextPage = () => {
           projects as UNSW does not allow it.
         </Paragraph>
         
-        <LinkButton> Github Page </LinkButton>
+        <LinkButton href="https://github.com/m4ch374"> Github Page </LinkButton>
 
         <hr className="w-[90vw] lg:w-[900px] border-gray-600/80" />
 

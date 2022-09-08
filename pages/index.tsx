@@ -3,7 +3,8 @@ import Head from 'next/head'
 import ContentContainer from '../components/ContentContainer'
 import Intro from '../components/Intro'
 import Paragraph from '../components/Paragraph'
-import MyButton from '../components/LinkButton'
+import LinkButton from '../components/LinkButton'
+import InlineSection from '../components/InlineSection'
 
 const Home: NextPage = () => {
   return (
@@ -15,32 +16,58 @@ const Home: NextPage = () => {
       </Head>
                 
       <ContentContainer className="gap-10">
-        <Intro imagePath="/funni_anya.png" className="place-items-center pt-[70px]" />
+        <Intro imagePath="/myself.jpg" className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
-          Anya is a short young girl with fair skin and green eyes. 
-          Loid describes her as appearing about four to five years old at the oldest. 
-          Her green eyes are large and oval-shaped with prominent eyelashes. 
-          She has shoulder-length, light pink hair that curls inwards with a fringe that reaches just 
-          above her eyes and a small strand of ahoge at the top of her head. 
-          Anya is noticeably shorter than most of her peers and many of the insults 
-          Damian and his friends direct at her target her small size. 
+          I am a Computer Science student at UNSW. With a passion in coding and programming,
+          I had worked as a programming tutor teaching basic C programming to high school students, it was 
+          a fun experience! 
+          I've also completed numerous personal projects in my free time, and also had a good score 
+          in the university projects.
+
+          <br /><br />
+
+          Apart from coding, I also like to cook and play guitar as I'm not a Certified Grass Toucher&trade;.
+          And yes, the photo has me wearing mask cuz I'm a shy person.
         </Paragraph>
 
         <div className="text-center">
-          <MyButton> My Profile! </MyButton>
+          <LinkButton href='https://www.linkedin.com/in/henry-wan-b20742223/'> LinkedIn &rarr; </LinkButton>
         </div>
 
-        <Paragraph title="What I do">
-          Anya's true origins, as well as the source of her telepathic abilities, 
-          are largely unclear. Prior to being found at the orphanage, 
-          she was made by accident, as an unintended consequence of research experiments 
-          conducted by an unknown organization. 
-          She had the code name 'Test Subject "007"' 
-          and was treated very strictly by the scientists, 
-          not being allowed to play and forced to learn how to use her powers, 
-          seemingly for the sake of world peace.
+        <Paragraph title="Skills & Experience">
+          <div>
+            Had experiences in both front-end and back-end development. Worked as a programming tutor before.
+          </div>
+
+          <InlineSection title='Front End' titleClassName='bg-green-700/80 px-2 rounded-md text-green-200'> 
+            ReactJS, NextJS, CSS, TailwindCSS 
+          </InlineSection>
+
+          <InlineSection title='Back End' titleClassName='bg-blue-700/80 px-2 mr-6 rounded-md text-blue-200'> 
+            Python, Java 
+          </InlineSection>
+
+          <InlineSection title='Others' titleClassName='bg-purple-800/80 px-2 mr-10 rounded-md text-purple-200'>
+            C, C#
+          </InlineSection>
         </Paragraph>
+
+        <Paragraph title='What I like'>
+          Coding&#x1f5a5;, Guitar&#x1f3b8;, Gaming&#x1f916;, Cooking&#x1f468; 
+        </Paragraph>
+
+        <hr className='w-[55vw] border-gray-600/80' />
+
+        <div className='flex flex-row place-items-center gap-10'>
+          <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" className='w-[50px] h-[50px]'>
+            <div className="bg-[url('/linkedinicon.svg')] w-[50px] h-[50px] invert" />
+          </a>
+
+          <a href='https://github.com/m4ch374' target="_blank" className='w-[50px] h-[50px]'>
+            <div className="bg-[url('/githubicon.svg')] w-[50px] h-[50px] invert bg-cover" />
+          </a>
+        </div>
       </ContentContainer>
     </div>
   )
