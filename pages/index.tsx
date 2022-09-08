@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           Coding&#x1f5a5;, Guitar&#x1f3b8;, Gaming&#x1f916;, Cooking&#x1f468; 
         </Paragraph>
 
-        <hr className='w-[55vw] border-gray-600/80' />
+        <hr className='w-[80vw] border-gray-600/80 lg:w-[900px]' />
 
         <div className='flex flex-row place-items-center gap-10'>
           <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" className='w-[50px] h-[50px]'>

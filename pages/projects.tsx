@@ -38,7 +38,7 @@ const Projects: NextPage = () => {
         <Section>
           <span className="text-3xl"> Personal Projects </span>
 
-          <div className="flex justify-center pt-4 gap-10 flex-wrap">
+          <div className="flex justify-center flex-wrap pt-4 gap-10">
             { projectsArray.map((proj: ProjectMeta) => <ProjectCard projectDetail={proj} />) }
           </div>
         </Section>
