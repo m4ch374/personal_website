@@ -56,18 +56,19 @@ const MenuBar: React.FC = () => {
         px-[8%] 
         py-3 
         grid-flow-col 
-        justify-start 
+        justify-center 
         text-3xl 
-        gap-6 
         fixed 
         w-[100%]
         z-[100]"
       >
-        <Link href="/"> 
-          <a className="font-bold cursor-pointer py-2"> Henry Wan </a> 
-        </Link>
-        <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
-        <MenuBarBtn> Source </MenuBarBtn>
+        <div className="flex flex-row gap-6 place-items-start min-w-0 sm:w-[90vw] lg:w-[1000px] px-[100px]">
+          <Link href="/"> 
+            <a className="font-bold cursor-pointer py-2"> Henry Wan </a> 
+          </Link>
+          <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
+          <MenuBarBtn> Source </MenuBarBtn>
+        </div>
     </div>
   )
 }
