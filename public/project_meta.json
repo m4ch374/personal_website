@@ -1,7 +1,7 @@
 {
     "personal_projects": [
         {
-            "thumbnail": "/lol3.png",
+            "thumbnail": "/mu_sick.png",
             "name": "\u03BCsick Bot",
             "description": "A Discord music bot coded in Python using Discord API",
             "features":[
