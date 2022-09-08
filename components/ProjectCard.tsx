@@ -32,7 +32,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
                 <hr className="border-gray-400/80" />
                 <div>
                   <span className="text-2xl"> Features: </span>
-                  <ul className="list-disc pl-[30px] text-xl">
+                  <ul className="list-disc pl-[30px] text-xl font-sans">
                     { projectMeta.features.map((feats: string) => <li>{feats}</li>) }
                   </ul>
                 </div>
@@ -40,7 +40,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
                   <div>
                     <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
                   </div>
-                  <span> { projectMeta.stack.join(', ') } </span>
+                  <span className="font-sans text-lg"> { projectMeta.stack.join(', ') } </span>
                 </div>
                 <LinkButton className={`absolute bottom-8 right-0 ${projectMeta.projectUrl==="N/A" ? "cursor-not-allowed" : ""}`} href={projectMeta.projectUrl==="N/A" ? undefined : projectMeta.projectUrl}> Source &rarr; </LinkButton>
               </div>

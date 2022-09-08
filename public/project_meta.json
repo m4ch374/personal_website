@@ -5,15 +5,15 @@
             "name": "\u03BCsick Bot",
             "description": "A Discord music bot coded in Python using Discord API",
             "features":[
-                "something",
-                "another thing",
-                "another placeholder lol"
+                "Play music from youtube",
+                "A queuing system",
+                "Other fun commands"
             ],
             "stack": [
                 "Python",
-                "Something",
-                "Something else",
-                "Another thing"
+                "Discord.py",
+                "FFmpeg",
+                "youtube-dl"
             ],
             "projectUrl": "https://github.com/m4ch374/mu_sick_bot"
         },
@@ -22,15 +22,14 @@
             "name": "GTA Cayo ATM",
             "description": "An application that exploits a bug found in GTA",
             "features":[
-                "something",
-                "another thing",
-                "another placeholder lol"
+                "Cuts off GTA's access to the internet with a click of a button",
+                "Does not interfere with other application's acccess to the internet"
             ],
             "stack": [
-                "Python",
-                "Something",
-                "Something else",
-                "Another thing"
+                "C#",
+                ".NET",
+                "Windows Forms",
+                "WindowsFirewallHelper"
             ],
             "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
         },
@@ -39,15 +38,12 @@
             "name": "Ascyee",
             "description": "Using Ascii characters to represent an image",
             "features":[
-                "something",
-                "another thing",
-                "another placeholder lol"
+                "Convert an image to an Ascii art",
+                "I was bored....."
             ],
             "stack": [
-                "Python",
-                "Something",
-                "Something else",
-                "Another thing"
+                "C",
+                "uhh... also C"
             ],
             "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
         }
@@ -58,15 +54,15 @@
             "name": "Dungeon Mania",
             "description": "A Backend for a web game called Dungeon Mania",
             "features":[
-                "something",
-                "another thing",
-                "another placeholder lol"
+                "An interactive game",
+                "Different types of enemies, bosses",
+                "Users could customize the character models"
             ],
             "stack": [
-                "Python",
-                "Something",
-                "Something else",
-                "Another thing"
+                "Java",
+                "Scintillia",
+                "JSON",
+                "GSON"
             ],
             "projectUrl": "N/A"
         },
@@ -75,15 +71,15 @@
             "name": "UNSW Seams",
             "description": "A backend for a chat webapp, basically a crappy Discord clone",
             "features":[
-                "something",
-                "another thing",
-                "another placeholder lol"
+                "An online chatting platform",
+                "Group chats & DMs",
+                "Profile customisations & Metrics tracker"
             ],
             "stack": [
                 "Python",
-                "Something",
-                "Something else",
-                "Another thing"
+                "Flask",
+                "JWT",
+                "JSON"
             ],
             "projectUrl": "N/A"
         }
