@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React from "react";
+import Image from "next/image"
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
@@ -66,7 +67,10 @@ const MenuBar: React.FC = () => {
       >
         <div className="flex flex-row gap-6 place-items-start min-w-0 sm:w-[90vw] lg:w-[1000px] px-[100px]">
           <Link href="/"> 
-            <a className="font-bold cursor-pointer py-2"> Henry Wan </a> 
+            <a className="font-bold cursor-pointer py-2 inline-flex align-baseline group">
+            <div className="bg-[url('/guitar.svg')] w-[30px] h-[30px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
+              <span className="ml-4"> Henry Wan </span>
+            </a> 
           </Link>
           <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
           <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
