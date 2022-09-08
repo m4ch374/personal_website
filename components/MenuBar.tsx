@@ -6,10 +6,11 @@ interface IMenuBarBtn {
   children?: string | JSX.Element,
   className?: string,
   href?: string,
-  id?: string
+  id?: string,
+  blank?: boolean
 }
 
-const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""}) => {
+const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id="", blank=false}) => {
   const router = useRouter()
   const currPath = router.pathname
 
@@ -39,7 +40,8 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
           ${className} 
           ${isFocused ? focusedStyle : unfocusedStyle}
           `
-        }>
+        }
+        target={blank ? "_blank": "_self"}>
           {children}
       </a>
     </Link>
@@ -67,7 +69,7 @@ const MenuBar: React.FC = () => {
             <a className="font-bold cursor-pointer py-2"> Henry Wan </a> 
           </Link>
           <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
-          <MenuBarBtn href="https://github.com/m4ch374/personal_website"> Source </MenuBarBtn>
+          <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> Source </MenuBarBtn>
         </div>
     </div>
   )
