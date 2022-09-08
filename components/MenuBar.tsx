@@ -49,7 +49,7 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
 const MenuBar: React.FC = () => {
   return (
     <div className="backdrop-blur-[20px] 
-        bg-[#121212]
+        bg-[#1c1c1c]
         bg-opacity-50 
         grid 
         grid-rows-1 

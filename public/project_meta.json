@@ -1,0 +1,91 @@
+{
+    "personal_projects": [
+        {
+            "thumbnail": "/lol3.png",
+            "name": "\u03BCsick Bot",
+            "description": "A Discord music bot coded in Python using Discord API",
+            "features":[
+                "something",
+                "another thing",
+                "another placeholder lol"
+            ],
+            "stack": [
+                "Python",
+                "Something",
+                "Something else",
+                "Another thing"
+            ],
+            "projectUrl": "https://github.com/m4ch374/mu_sick_bot"
+        },
+        {
+            "thumbnail": "/gta_cayo.png",
+            "name": "GTA Cayo ATM",
+            "description": "An application that exploits a bug found in GTA",
+            "features":[
+                "something",
+                "another thing",
+                "another placeholder lol"
+            ],
+            "stack": [
+                "Python",
+                "Something",
+                "Something else",
+                "Another thing"
+            ],
+            "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
+        },
+        {
+            "thumbnail": "/ascyee.png",
+            "name": "Ascyee",
+            "description": "Using Ascii characters to represent an image",
+            "features":[
+                "something",
+                "another thing",
+                "another placeholder lol"
+            ],
+            "stack": [
+                "Python",
+                "Something",
+                "Something else",
+                "Another thing"
+            ],
+            "projectUrl": "https://github.com/m4ch374/GTA_Cayo_ATM"
+        }
+    ],
+    "university_project": [
+        {
+            "thumbnail": "/dungeon.png",
+            "name": "Dungeon Mania",
+            "description": "A Backend for a web game called Dungeon Mania",
+            "features":[
+                "something",
+                "another thing",
+                "another placeholder lol"
+            ],
+            "stack": [
+                "Python",
+                "Something",
+                "Something else",
+                "Another thing"
+            ],
+            "projectUrl": "N/A"
+        },
+        {
+            "thumbnail": "/seams.png",
+            "name": "UNSW Seams",
+            "description": "A backend for a chat webapp, basically a crappy Discord clone",
+            "features":[
+                "something",
+                "another thing",
+                "another placeholder lol"
+            ],
+            "stack": [
+                "Python",
+                "Something",
+                "Something else",
+                "Another thing"
+            ],
+            "projectUrl": "N/A"
+        }
+    ]
+}

@@ -6,8 +6,12 @@ import Image from "next/image";
 import LinkButton from "../components/LinkButton";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
+import proj from "../public/project_meta.json"
 
 const Projects: NextPage = () => {
+  const projectsArray = proj.personal_projects
+  const uniProjectsArray = proj.university_project
+
   return (
     <div>
       <Head>
@@ -35,9 +39,15 @@ const Projects: NextPage = () => {
           <span className="text-3xl"> Personal Projects </span>
 
           <div className="flex justify-center pt-4 gap-10 flex-wrap">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            { projectsArray.map((proj: ProjectMeta) => <ProjectCard projectDetail={proj} />) }
+          </div>
+        </Section>
+
+        <Section>
+          <span className="text-3xl"> University Projects </span>
+
+          <div className="flex justify-center pt-4 gap-10 flex-wrap">
+            { uniProjectsArray.map((proj: ProjectMeta) => <ProjectCard projectDetail={proj} />) }
           </div>
         </Section>
       </ContentContainer>
@@ -46,3 +56,4 @@ const Projects: NextPage = () => {
 }
 
 export default Projects
+export type ProjectMeta = typeof proj.personal_projects[0]
