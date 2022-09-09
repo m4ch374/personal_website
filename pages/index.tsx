@@ -5,8 +5,11 @@ import Intro from '../components/Intro'
 import Paragraph from '../components/Paragraph'
 import LinkButton from '../components/LinkButton'
 import InlineSection from '../components/InlineSection'
+import ImagePrefix from '../helpers/ImagePrefix'
 
 const Home: NextPage = () => {
+  const prefix = ImagePrefix()
+
   return (
     <div>
       <Head>
@@ -16,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
                 
       <ContentContainer className="gap-10">
-        <Intro imagePath="/personal_website/myself.jpg" className="place-items-center pt-[70px]" />
+        <Intro imagePath={`${prefix}/myself.jpg`} className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
           I am a Computer Science student at UNSW. With a passion in coding and programming,
@@ -61,11 +64,11 @@ const Home: NextPage = () => {
 
         <div className='flex flex-row place-items-center gap-10'>
           <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className="bg-[url('/linkedinicon.svg')] w-[50px] h-[50px] invert" />
+            <div className={`w-[50px] h-[50px] invert`} style={{"backgroundImage": `url(${prefix}/linkedinicon.svg)`}} />
           </a>
 
           <a href='https://github.com/m4ch374' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className="bg-[url('/githubicon.svg')] w-[50px] h-[50px] invert bg-cover" />
+            <div className="w-[50px] h-[50px] invert bg-cover" style={{"backgroundImage": `url(${prefix}/githubicon.svg)`}} />
           </a>
         </div>
       </ContentContainer>

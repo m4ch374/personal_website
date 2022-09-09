@@ -2,15 +2,17 @@ import { NextPage } from "next";
 import Head from "next/head";
 import ContentContainer from "../components/ContentContainer";
 import Paragraph from "../components/Paragraph";
-import Image from "next/image";
 import LinkButton from "../components/LinkButton";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import proj from "../public/project_meta.json"
+import ImagePrefix from "../helpers/ImagePrefix";
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
   const uniProjectsArray = proj.university_project
+
+  const prefix = ImagePrefix()
 
   return (
     <div>
@@ -21,7 +23,7 @@ const Projects: NextPage = () => {
       </Head>
       
       <ContentContainer className="gap-10">
-        <div className="mt-[80px] relative w-[500px] h-[300px] md:h-[350px] md:w-[600px] bg-[url('/mountain.png')] bg-cover" />
+        <div className="mt-[80px] relative w-[500px] h-[300px] md:h-[350px] md:w-[600px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
 
         <Paragraph title="Personal & University Projects">
           These are my Personal & University Projects. As much as I would love to provide 
