@@ -7,7 +7,7 @@ interface IIntro {
   className?: string
 }
 
-const Intro: React.FC<IIntro> = ({ imagePath = "/funni_anya.png", className="" }) => {
+const Intro: React.FC<IIntro> = ({ imagePath = "", className="" }) => {
   return (
     <Section className={className}>
       <img src={imagePath} width="250px" height="250px" alt="introImg" className="rounded-full" />

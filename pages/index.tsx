@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
                 
       <ContentContainer className="gap-10">
-        <Intro imagePath="/myself.jpg" className="place-items-center pt-[70px]" />
+        <Intro imagePath="/personal_website/myself.jpg" className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
           I am a Computer Science student at UNSW. With a passion in coding and programming,
