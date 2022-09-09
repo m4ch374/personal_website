@@ -19,6 +19,7 @@ const Projects: NextPage = () => {
       <Head>
         <title> Projects </title>
         <meta name="Description" content="Personal and University projects" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
