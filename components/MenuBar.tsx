@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import Image from "next/image"
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
@@ -36,8 +35,8 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
     <Link href={href}>
       <a className={`cursor-pointer 
           relative 
-          py-2
-          px-3
+          py-1
+          px-2
           ${className} 
           ${isFocused ? focusedStyle : unfocusedStyle}
           `
@@ -56,27 +55,27 @@ const MenuBar: React.FC = () => {
         bg-opacity-50 
         grid 
         grid-rows-1 
-        px-[8%] 
-        py-3 
+        px-[6%] 
+        py-2 
         grid-flow-col 
         justify-center 
-        text-3xl 
+        text-2xl 
         fixed 
         w-[100%]
         z-[100]"
       >
-        <div className="flex flex-row gap-6 place-items-start min-w-0 sm:w-[90vw] lg:w-[1000px] px-[100px]">
+        <div className="flex flex-row gap-4 place-items-start min-w-0 w-[90vw] lg:w-[800px] px-[80px]">
           <Link href="/"> 
-            <a className="font-bold cursor-pointer py-2 inline-flex align-baseline group">
-            <div className="bg-[url('/guitar.svg')] w-[30px] h-[30px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
-              <span className="ml-4"> Henry Wan </span>
+            <a className="font-bold cursor-pointer py-1 inline-flex align-baseline group">
+              <img src="/guitar.svg" alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
+              <span className="ml-2"> Henry Wan </span>
             </a> 
           </Link>
           <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
           <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
-            <div className="inline-flex gap-4 justify-center align-bottom">
-              <div className="bg-[url('/githubicon.svg')] w-[30px] h-[30px] bg-cover invert" />
-              <span className="align-middle"> Source </span>
+            <div className="inline-flex gap-3 justify-center align-top items-center">
+              <div className="bg-[url('/githubicon.svg')] invert w-[25px] h-[25px] bg-cover" />
+              <span> Source </span>
             </div>
           </MenuBarBtn>
         </div>

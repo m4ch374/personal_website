@@ -15,11 +15,11 @@ const Home: NextPage = () => {
       <Head>
         <title>Henry&apos;s website</title>
         <meta name="description" content="Henry's personal website" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
                 
-      <ContentContainer className="gap-10">
+      <ContentContainer className="gap-8">
         <Intro imagePath={`${prefix}/myself.jpg`} className="place-items-center pt-[70px]" />
 
         <Paragraph title="About me"> 
@@ -44,15 +44,15 @@ const Home: NextPage = () => {
             Had experiences in both front-end and back-end development. Worked as a programming tutor before.
           </div>
 
-          <InlineSection title='Front End' titleClassName='bg-green-700/80 px-2 rounded-md text-green-200'> 
+          <InlineSection title='Front End' titleClassName='bg-green-700/80 px-1 rounded-md text-green-200'> 
             ReactJS, NextJS, CSS, TailwindCSS 
           </InlineSection>
 
-          <InlineSection title='Back End' titleClassName='bg-blue-700/80 px-2 mr-6 rounded-md text-blue-200'> 
+          <InlineSection title='Back End' titleClassName='bg-blue-700/80 px-1 mr-[24px] rounded-md text-blue-200'> 
             Python, Java 
           </InlineSection>
 
-          <InlineSection title='Others' titleClassName='bg-purple-800/80 px-2 mr-[35px] rounded-md text-purple-200'>
+          <InlineSection title='Others' titleClassName='bg-purple-800/80 px-1 mr-[36px] rounded-md text-purple-200'>
             C, C#
           </InlineSection>
         </Paragraph>
@@ -61,15 +61,15 @@ const Home: NextPage = () => {
           Coding&#x1f5a5;, Guitar&#x1f3b8;, Gaming&#x1f916;, Cooking&#x1f468; 
         </Paragraph>
 
-        <hr className='w-[80vw] border-gray-600/80 lg:w-[900px]' />
+        <hr className='w-[80vw] border-gray-600/80 lg:w-[800px]' />
 
-        <div className='flex flex-row place-items-center gap-10'>
+        <div className='flex flex-row place-items-center gap-8'>
           <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className={`w-[50px] h-[50px] invert`} style={{"backgroundImage": `url(${prefix}/linkedinicon.svg)`}} />
+            <div className={`w-[40px] h-[40px] invert bg-cover`} style={{"backgroundImage": `url(${prefix}/linkedinicon.svg)`}} />
           </a>
 
           <a href='https://github.com/m4ch374' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className="w-[50px] h-[50px] invert bg-cover" style={{"backgroundImage": `url(${prefix}/githubicon.svg)`}} />
+            <div className="w-[40px] h-[40px] invert bg-cover" style={{"backgroundImage": `url(${prefix}/githubicon.svg)`}} />
           </a>
         </div>
       </ContentContainer>

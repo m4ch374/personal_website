@@ -19,12 +19,12 @@ const Projects: NextPage = () => {
       <Head>
         <title> Projects </title>
         <meta name="Description" content="Personal and University projects" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <ContentContainer className="gap-10">
-        <div className="mt-[80px] relative w-[500px] h-[300px] md:h-[350px] md:w-[600px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
+        <div className="mt-[70px] relative w-[400px] h-[240px] md:h-[280px] md:w-[480px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
 
         <Paragraph title="Personal & University Projects">
           These are my Personal & University Projects. As much as I would love to provide 
@@ -34,20 +34,20 @@ const Projects: NextPage = () => {
         
         <LinkButton href="https://github.com/m4ch374"> Github &rarr; </LinkButton>
 
-        <hr className="w-[90vw] lg:w-[900px] border-gray-600/80" />
+        <hr className="w-[70vw] lg:w-[800px] border-gray-600/80" />
 
         <Section>
-          <span className="text-3xl"> Personal Projects </span>
+          <span className="text-2xl"> Personal Projects </span>
 
-          <div className="flex justify-center flex-wrap pt-4 gap-10">
+          <div className="flex justify-center flex-wrap pt-3 gap-8">
             { projectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
           </div>
         </Section>
 
         <Section>
-          <span className="text-3xl"> University Projects </span>
+          <span className="text-2xl"> University Projects </span>
 
-          <div className="flex justify-center pt-4 gap-10 flex-wrap">
+          <div className="flex justify-center pt-3 gap-8 flex-wrap">
             { uniProjectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
           </div>
         </Section>

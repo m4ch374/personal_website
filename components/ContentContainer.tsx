@@ -7,7 +7,7 @@ interface IContentContainer {
 
 const ContentContainer: React.FC<IContentContainer> = ({children, className}) => {
   return (
-    <div className={`pt-4 pb-[100px] w-[50vw] min-w-full grid grid-flow-row place-items-center ${className}`}>
+    <div className={`pt-3 pb-[80px] w-[40vw] min-w-[100%] grid grid-flow-row place-items-center ${className}`}>
       {children}
     </div>
   )

@@ -9,9 +9,9 @@ interface ILinkButton {
 const MyButton: React.FC<ILinkButton> = ({ children, href, className }) => {
   return (
     <div className={`${className} cursor-pointer`}>
-      <a className="text-3xl 
+      <a className="text-2xl 
         bg-purple-400  
-        px-6 
+        px-5 
         py-2 
         rounded-lg 
         transition-colors 

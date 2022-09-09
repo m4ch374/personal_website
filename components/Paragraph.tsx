@@ -10,7 +10,7 @@ interface IParagraph {
 const Paragraph: React.FC<IParagraph> = ({title, children, className}) => {
   return (
     <Section className={className}>
-      <span className="text-4xl 
+      <span className="text-3xl 
             font-bold underline 
             decoration-slate-400/50 
             underline-offset-[7px] 
@@ -18,7 +18,7 @@ const Paragraph: React.FC<IParagraph> = ({title, children, className}) => {
           > 
             {title} 
       </span>
-      <div className="pt-2 text-2xl"> {children} </div>
+      <div className="pt-2 text-lg"> {children} </div>
     </Section>
   )
 }

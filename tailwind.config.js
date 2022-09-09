@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': '512px',
+        'lg': '820px'
+      },
+
       animation: {
         pop: 'pop 0.25s ease-in-out',
       },
