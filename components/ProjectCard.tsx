@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ImagePrefix from "../helpers/ImagePrefix";
 import { ProjectMeta } from "../pages/projects";
 import LinkButton from "./LinkButton"
 
@@ -8,6 +9,8 @@ interface IProjectDetails {
 }
 
 const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => {
+  const prefix = ImagePrefix()
+
   return (
     <div className="fixed 
       top-0 
@@ -24,7 +27,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       onClick={() => setPopped(false)}>
         <div onClick={e => e.stopPropagation()}>
           <div className="flex w-[500px] aspect-[3/4] flex-col lg:flex-row lg:w-[850px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden animate-pop">
-            <div className="w-full aspect-[5/2] bg-cover lg:w-[320px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${projectMeta.thumbnail})`}} />
+            <div className="w-full aspect-[5/2] bg-cover lg:w-[320px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${prefix + projectMeta.thumbnail})`}} />
             <div className="h-full relative flex-grow mr-8">
               <div className="p-8 text-slate-800 grid grid-flow-row gap-2">
                 <span className="text-4xl font-bold"> {decodeURI(projectMeta.name)} </span>
@@ -33,7 +36,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
                 <div>
                   <span className="text-2xl"> Features: </span>
                   <ul className="list-disc pl-[30px] text-xl font-sans">
-                    { projectMeta.features.map((feats: string) => <li>{feats}</li>) }
+                    { projectMeta.features.map((feats: string) => <li key="key"> {feats} </li>) }
                   </ul>
                 </div>
                 <div className="absolute bottom-32 text-xl gap-4 inline-flex">
@@ -58,6 +61,7 @@ interface IProjectCard {
 
 const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
   const [popped, setPopped] = useState(false)
+  const prefix = ImagePrefix()
 
   return (
     <div className="grid grid-flow-row place-items-center w-[50vw] lg:w-[300px]">
@@ -71,7 +75,7 @@ const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
         bg-center
         rounded-xl 
       `}
-      style={{backgroundImage: `url(${projectDetail.thumbnail})`}}
+      style={{backgroundImage: `url(${prefix + projectDetail.thumbnail})`}}
       onClick={() => setPopped(true)} />
       <span className="text-xl pt-5 text-center font-sans"> 
         {projectDetail.description}
