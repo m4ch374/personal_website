@@ -61,6 +61,7 @@ interface IProjectCard {
 
 const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
   const [popped, setPopped] = useState(false)
+  const prefix = ImagePrefix()
 
   return (
     <div className="grid grid-flow-row place-items-center w-[50vw] lg:w-[300px]">
@@ -74,7 +75,7 @@ const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
         bg-center
         rounded-xl 
       `}
-      style={{backgroundImage: `url(${projectDetail.thumbnail})`}}
+      style={{backgroundImage: `url(${prefix + projectDetail.thumbnail})`}}
       onClick={() => setPopped(true)} />
       <span className="text-xl pt-5 text-center font-sans"> 
         {projectDetail.description}
