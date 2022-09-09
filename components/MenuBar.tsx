@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import ImagePrefix from "../helpers/ImagePrefix";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
@@ -49,6 +50,8 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
 }
 
 const MenuBar: React.FC = () => {
+  const prefix = ImagePrefix()
+
   return (
     <div className="backdrop-blur-[20px] 
         bg-[#1c1c1c]
@@ -67,14 +70,14 @@ const MenuBar: React.FC = () => {
         <div className="flex flex-row gap-4 place-items-start min-w-0 w-[90vw] lg:w-[800px] px-[80px]">
           <Link href="/"> 
             <a className="font-bold cursor-pointer py-1 inline-flex align-baseline group">
-              <img src="/guitar.svg" alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
+              <img src={prefix + `/guitar.svg`} alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
               <span className="ml-2"> Henry Wan </span>
             </a> 
           </Link>
           <MenuBarBtn className="ml-14" href="/projects" id="/projects"> Projects </MenuBarBtn>
           <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
             <div className="inline-flex gap-3 justify-center align-top items-center">
-              <div className="bg-[url('/githubicon.svg')] invert w-[25px] h-[25px] bg-cover" />
+              <img src={`${prefix}/githubicon.svg`} alt="giticon" className="invert w-[25px] h-[25px] bg-cover"/>
               <span> Source </span>
             </div>
           </MenuBarBtn>
