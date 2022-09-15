@@ -27,8 +27,8 @@ const Projects: NextPage = () => {
         <div className="mt-[70px] relative w-[400px] h-[240px] md:h-[280px] md:w-[480px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
 
         <Paragraph title="Personal & University Projects">
-          These are my Personal & University Projects. As much as I would love to provide 
-          source code for every project that I&apos;ve made, I&apos;m unable to provide code for university 
+          These are my Personal & University Projects. As much as I would love to provide the 
+          source code for every project that I&apos;ve made, I&apos;m unable to provide the code for university 
           projects as UNSW does not allow it.
         </Paragraph>
         
