@@ -10,6 +10,7 @@ interface IProjectDetails {
 
 const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => {
   const prefix = ImagePrefix()
+  const avalible = projectMeta.projectUrl!=="N/A"
 
   return (
     <div className="fixed 
@@ -45,7 +46,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
                   </div>
                   <span className="font-sans text-base"> { projectMeta.stack.join(', ') } </span>
                 </div>
-                <LinkButton className={`absolute bottom-8 right-0 ${projectMeta.projectUrl==="N/A" ? "cursor-not-allowed" : ""}`} href={projectMeta.projectUrl==="N/A" ? undefined : projectMeta.projectUrl}> Source &rarr; </LinkButton>
+                <LinkButton className="absolute bottom-8 right-0" href={avalible ? projectMeta.projectUrl : undefined } avalible={avalible}> Source &rarr; </LinkButton>
               </div>
             </div>
             
