@@ -23,7 +23,7 @@ const Layout: React.FC<ILayout> = ({children}) => {
       y: 0,
       transition: {
         duration: 0.75,
-        delay: 0.5
+        delay: 0.2
       }
     }
   }
