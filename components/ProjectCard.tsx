@@ -32,7 +32,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       opacity: 0,
       transition: {
         type: "tween",
-        duration: 0.15
+        duration: 0.2
       }
     }
   }
