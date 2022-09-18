@@ -31,7 +31,7 @@ const Layout: React.FC<ILayout> = ({children}) => {
   return (
     <div className="overflow-hidden">
       <MenuBar />
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => scrollTo({top: 0})}>
 
         <motion.div 
           key={router.asPath}

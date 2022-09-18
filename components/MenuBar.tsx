@@ -33,7 +33,7 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
   const focusedStyle = `bg-purple-500 rounded-lg`
 
   return (
-    <Link href={href}>
+    <Link href={href} scroll={false}>
       <a className={`cursor-pointer 
           relative 
           py-1
@@ -68,7 +68,7 @@ const MenuBar: React.FC = () => {
         z-[100]"
       >
         <div className="flex flex-row gap-4 place-items-start min-w-0 w-[90vw] lg:w-[800px] px-[80px]">
-          <Link href="/"> 
+          <Link href="/" scroll={false}> 
             <a className="font-bold cursor-pointer py-1 inline-flex align-baseline group">
               <img src={prefix + `/guitar.svg`} alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
               <span className="ml-2"> Henry Wan </span>
