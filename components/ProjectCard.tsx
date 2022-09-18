@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ImagePrefix from "../helpers/ImagePrefix";
 import { ProjectMeta } from "../pages/projects";
 import LinkButton from "./LinkButton"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface IProjectDetails {
   setPopped: Function,
@@ -11,6 +12,30 @@ interface IProjectDetails {
 const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => {
   const prefix = ImagePrefix()
   const avalible = projectMeta.projectUrl!=="N/A"
+
+  const popIn = {
+    hidden: {
+      transform: 'scale(0.3)',
+      opacity: 0
+    },
+    visible: {
+      transform: 'scale(1)',
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 500,
+        damping: 20,
+      }
+    },
+    exit: {
+      transform: 'scale(0.2)',
+      opacity: 0,
+      transition: {
+        type: "tween",
+        duration: 0.15
+      }
+    }
+  }
 
   return (
     <div className="fixed 
@@ -27,7 +52,13 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       justify-center"
       onClick={() => setPopped(false)}>
         <div onClick={e => e.stopPropagation()}>
-          <div className="flex w-[400px] aspect-[3/4] flex-col lg:flex-row lg:w-[680px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden animate-pop">
+          <motion.div 
+            variants={popIn} 
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="flex w-[400px] aspect-[3/4] flex-col lg:flex-row lg:w-[680px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden">
+
             <div className="w-full aspect-[5/2] bg-cover lg:w-[260px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${prefix + projectMeta.thumbnail})`}} />
             <div className="h-full relative flex-grow mr-8">
               <div className="p-8 text-slate-800 grid grid-flow-row gap-2">
@@ -50,7 +81,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
               </div>
             </div>
             
-          </div>
+          </motion.div>
         </div>
     </div>
   )
@@ -82,7 +113,9 @@ const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
         {projectDetail.description}
       </span>
 
-      {popped ? <ProjectDetails setPopped={setPopped} projectMeta={projectDetail} /> : undefined}
+      <AnimatePresence initial={false} mode="popLayout">
+        {popped ? <ProjectDetails setPopped={setPopped} projectMeta={projectDetail} /> : undefined}
+      </AnimatePresence>
     </div>
   )
 }
