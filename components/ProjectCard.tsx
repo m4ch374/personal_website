@@ -59,7 +59,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
             exit="exit"
             className="flex w-[400px] aspect-[3/4] flex-col lg:flex-row lg:w-[680px] lg:aspect-[10/6] bg-[#FFFDE3] rounded-xl place-items-start overflow-hidden">
 
-            <div className="w-full aspect-[5/2] bg-cover lg:w-[260px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${prefix + projectMeta.thumbnail})`}} />
+            <div className="w-full h-[160px] bg-cover lg:w-[350px] lg:h-full lg:bg-center" style={{"backgroundImage": `url(${prefix + projectMeta.thumbnail})`}} />
             <div className="h-full relative flex-grow mr-8">
               <div className="p-8 text-slate-800 grid grid-flow-row gap-2">
                 <span className="text-3xl font-bold"> {decodeURI(projectMeta.name)} </span>
