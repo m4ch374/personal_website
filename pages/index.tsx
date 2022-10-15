@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           </InlineSection>
 
           <InlineSection title='Others' titleClassName='bg-purple-800/80 px-1 mr-[36px] rounded-md text-purple-200'>
-            C, C#
+            C, C#, SQL
           </InlineSection>
         </Paragraph>
 
