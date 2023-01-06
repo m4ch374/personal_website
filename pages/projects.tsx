@@ -24,7 +24,7 @@ const Projects: NextPage = () => {
       </Head>
       
       <ContentContainer className="gap-10">
-        <div className="mt-[70px] relative w-[400px] h-[240px] md:h-[280px] md:w-[480px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
+        <div className="mt-[70px] relative w-[400px] h-[240px] lg:h-[280px] lg:w-[480px] bg-cover transition-all" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
 
         <Paragraph title="Personal & University Projects">
           These are my Personal & University Projects. As much as I would love to provide the 
