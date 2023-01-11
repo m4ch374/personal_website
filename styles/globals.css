@@ -18,6 +18,10 @@ body {
   .width-menu {
     width: min(100vw, 700px);
   }
+
+  .place-self-x-end {
+    place-self: center end;
+  }
 }
 
 /* Scrollbar customisation */

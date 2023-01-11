@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import ImagePrefix from "../helpers/ImagePrefix";
+import HamburgerMenu from "./HamburgerMenu";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
@@ -66,20 +67,28 @@ const MenuBar: React.FC = () => {
         w-[100%]
         z-[100]"
       >
-        <div className="flex flex-row gap-4 width-menu pl-2">
-          <Link href="/" scroll={false}> 
-            <a className="font-bold cursor-pointer py-1 inline-flex align-baseline group">
-              <img src={prefix + `/guitar.svg`} alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
-              <span className="ml-2"> Henry Wan </span>
-            </a> 
-          </Link>
-          <MenuBarBtn className="ml-6" href="/projects" id="/projects"> Projects </MenuBarBtn>
-          <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
-            <div className="inline-flex gap-3 justify-center align-top items-center">
-              <img src={`${prefix}/githubicon.svg`} alt="giticon" className="invert w-[25px] h-[25px] bg-cover"/>
-              <span> Source </span>
+        <div className="grid grid-flow-col place-items-stretch width-menu">
+          <div className="flex flex-row gap-4 ml-4 place-self-start">
+            <Link href="/" scroll={false}> 
+              <a className="font-bold cursor-pointer py-1 inline-flex align-baseline group">
+                <img src={prefix + `/guitar.svg`} alt="guitar" className="w-[25px] h-[25px] bg-cover group-hover:-rotate-[25deg] transition-transform ease-in-out duration-[200ms]" />
+                <span className="ml-2"> Henry Wan </span>
+              </a> 
+            </Link>
+            <div className="hidden lg:flex align-middle">
+              <MenuBarBtn className="ml-6" href="/projects" id="/projects"> Projects </MenuBarBtn>
+              <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
+                <div className="inline-flex gap-3 justify-center align-top items-center">
+                  <img src={`${prefix}/githubicon.svg`} alt="giticon" className="invert w-[25px] h-[25px] bg-cover"/>
+                  <span> Source </span>
+                </div>
+              </MenuBarBtn>
             </div>
-          </MenuBarBtn>
+          </div>
+
+          <div className="place-self-x-end mr-2">
+            <HamburgerMenu />
+          </div>
         </div>
     </div>
   )
