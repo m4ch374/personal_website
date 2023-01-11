@@ -11,7 +11,7 @@ interface IClickedButton {
 const ClickedButton: React.FC<IClickedButton> = ({children, href='/', blank=false}) => {
   return (
     <Link href={href} scroll={false}> 
-      <a className="pl-3 text-xl hover:bg-[#1c1c1c] transition-all duration-300"
+      <a className="pl-3 text-xl hover:bg-[#1c1c1c] transition-all duration-300 font-mono"
       target={blank ? "_blank": "_self"}> {children} </a>
     </Link>
   )
