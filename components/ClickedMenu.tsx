@@ -11,7 +11,7 @@ interface IClickedButton {
 const ClickedButton: React.FC<IClickedButton> = ({children, href='/', blank=false}) => {
   return (
     <Link href={href} scroll={false}> 
-      <a className="pl-3 text-xl hover:bg-[#1c1c1c] transition-all duration-300 font-mono"
+      <a className="pl-3 text-xl hover:bg-[#ccc6b5] dark:hover:bg-[#3d3d3d] transition-all duration-300 font-mono"
       target={blank ? "_blank": "_self"}> {children} </a>
     </Link>
   )
@@ -47,8 +47,9 @@ const ClickedMenu: React.FC = () => {
       exit="exit"
       className="absolute
       right-1
-      top-9
-      bg-[#2b2b2b]
+      top-12
+      bg-[#e6e0cd]
+      dark:bg-[#2b2b2b]
       grid
       grid-flow-row
       place-items-stretch

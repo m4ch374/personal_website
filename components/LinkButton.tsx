@@ -33,13 +33,15 @@ const MyButton: React.FC<ILinkButton> = ({ children, href, avalible=true, classN
   return (
     <div className={`${className} group`}>
       <a className={`text-2xl 
-        bg-purple-400  
+        bg-[#84DFFF]
+        hover:bg-[#56d2ff]
+        dark:bg-purple-400  
+        dark:hover:bg-purple-500
         px-5 
         py-2 
         rounded-lg 
         transition-colors 
         duration-200 
-        hover:bg-purple-500
         ${avalible ? "cursor-pointer" : "cursor-not-allowed"}`}
         href={href} 
         target="_blank"

@@ -65,11 +65,11 @@ const Home: NextPage = () => {
 
         <div className='flex flex-row place-items-center gap-8'>
           <a href='https://www.linkedin.com/in/henry-wan-b20742223/' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className={`w-[40px] h-[40px] invert bg-cover`} style={{"backgroundImage": `url(${prefix}/linkedinicon.svg)`}} />
+            <div className="w-[40px] h-[40px] invert-[0.2] dark:invert bg-cover" style={{"backgroundImage": `url(${prefix}/linkedinicon.svg)`}} />
           </a>
 
           <a href='https://github.com/m4ch374' target="_blank" rel="noreferrer" className='w-[50px] h-[50px]'>
-            <div className="w-[40px] h-[40px] invert bg-cover" style={{"backgroundImage": `url(${prefix}/githubicon.svg)`}} />
+            <div className="w-[40px] h-[40px] invert-[0.2] dark:invert bg-cover" style={{"backgroundImage": `url(${prefix}/githubicon.svg)`}} />
           </a>
         </div>
       </ContentContainer>

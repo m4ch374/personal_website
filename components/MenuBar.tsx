@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import ImagePrefix from "../helpers/ImagePrefix";
 import HamburgerMenu from "./HamburgerMenu";
+import ThemeButton from "./ThemeButton";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,
@@ -23,7 +24,8 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
                           after:h-[2px]
                           after:bottom-0 
                           after:left-0 
-                          after:bg-purple-600 
+                          after:bg-sky-400
+                          dark:after:bg-purple-600 
                           after:origin-bottom-right 
                           after:scale-x-0 
                           after:transition-transform
@@ -31,7 +33,7 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
                           hover:after:scale-x-100 
                           hover:after:origin-bottom-left`
 
-  const focusedStyle = `bg-purple-500 rounded-lg`
+  const focusedStyle = `bg-[#84DFFF] dark:bg-purple-500 rounded-lg`
 
   return (
     <Link href={href} scroll={false}>
@@ -54,9 +56,12 @@ const MenuBar: React.FC = () => {
   const prefix = ImagePrefix()
 
   return (
-    <div className="backdrop-blur-[20px] 
-        bg-[#1c1c1c]
-        bg-opacity-50 
+    <div className="backdrop-blur-[8px] 
+        bg-[#d1c8b7]
+        bg-opacity-70 
+        dark:bg-[#1c1c1c]
+        dark:backdrop-blur-[20px] 
+        dark:bg-opacity-50 
         grid 
         grid-rows-1  
         py-2 
@@ -79,14 +84,15 @@ const MenuBar: React.FC = () => {
               <MenuBarBtn className="ml-6" href="/projects" id="/projects"> Projects </MenuBarBtn>
               <MenuBarBtn href="https://github.com/m4ch374/personal_website" blank={true}> 
                 <div className="inline-flex gap-3 justify-center align-top items-center">
-                  <img src={`${prefix}/githubicon.svg`} alt="giticon" className="invert w-[25px] h-[25px] bg-cover"/>
+                  <img src={`${prefix}/githubicon.svg`} alt="giticon" className="invert-[0.2] dark:invert w-[25px] h-[25px] bg-cover"/>
                   <span> Source </span>
                 </div>
               </MenuBarBtn>
             </div>
           </div>
 
-          <div className="place-self-x-end mr-2">
+          <div className="place-self-x-end mr-2 inline-flex gap-2">
+            <ThemeButton />
             <HamburgerMenu />
           </div>
         </div>
