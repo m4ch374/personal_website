@@ -28,7 +28,7 @@ const ThemeButton: React.FC = () => {
       dark:bg-sky-400 
       dark:hover:bg-sky-500
       ">
-      <img src={prefix + `themeicon.svg`} alt="themeicon" className="object-fill invert-[0.95] dark:invert" />
+      <img src={`themeicon.svg`} alt="themeicon" className="object-fill invert-[0.95] dark:invert" />
     </motion.div>
   )
 }
