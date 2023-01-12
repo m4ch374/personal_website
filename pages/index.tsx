@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       </Head>
                 
       <ContentContainer className="gap-8">
-        <Intro imagePath={`${prefix}/myself.jpg`} className="place-items-center pt-[70px]" />
+        <Intro imagePath={`${prefix}/myself.jpg`} className="place-items-center pt-[80px]" />
 
         <Paragraph title="About me"> 
           I am a Computer Science student at UNSW. With a passion in coding and programming,

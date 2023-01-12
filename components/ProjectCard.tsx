@@ -36,7 +36,6 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       }
     }
   }
-
   return (
     <div className="fixed 
       top-0 
