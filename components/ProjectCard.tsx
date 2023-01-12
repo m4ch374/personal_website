@@ -43,7 +43,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
       left-0 
       w-screen
       h-screen
-      bg-[#FAF7F0]
+      bg-[#d8d5d0]
       bg-opacity-50
       backdrop-blur-[15px]
       dark:bg-[#1C1C1C] 
