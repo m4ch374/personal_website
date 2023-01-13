@@ -26,9 +26,9 @@ const Projects: NextPage = () => {
         <MiniModel />
 
         <Paragraph title="Personal & University Projects">
-          These are my Personal & University Projects. As much as I would love to provide the 
-          source code for every project that I&apos;ve made, I&apos;m unable to provide the code for university 
-          projects as UNSW does not allow it.
+          These are some of my Personal & University Projects. As much as I would love to provide the 
+          source code for every project that I&apos;ve made, the university 
+          won&apos;t be happy if I open sourced my university projects. Truly unfortunate :(
         </Paragraph>
         
         <LinkButton href="https://github.com/m4ch374"> Github &rarr; </LinkButton>

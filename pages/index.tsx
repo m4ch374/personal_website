@@ -23,16 +23,18 @@ const Home: NextPage = () => {
         <Intro imagePath={`${prefix}/myself.jpg`} className="place-items-center pt-[80px]" />
 
         <Paragraph title="About me"> 
-          I am a Computer Science student at UNSW. With a passion in coding and programming,
-          I had worked as a programming tutor teaching basic C programming to high school students, it was 
-          a fun experience! 
-          I&apos;ve also completed numerous personal projects in my free time, and also had a good score 
-          in the university projects.
+          I am a Computer Science student at UNSW. With a passion in coding and programming.
 
           <br /><br />
 
-          Apart from coding, I also like to cook and play guitar as I&apos;m not a Certified Grass Toucher&trade;.
-          And yes, the photo has me wearing mask cuz I&apos;m a shy person.
+          I had worked as a programming tutor teaching basic C programming to high school students, it was 
+          a fun experience! I&apos;ve also completed numerous personal projects in my free time and work
+          hard in the university projects.
+
+          <br /><br />
+
+          Apart from coding, I like to cook and play guitar as I&apos;m not a Certified Grass Toucher&trade;.
+          And yes, the photo has me wearing a mask cuz I&apos;m a shy person.
         </Paragraph>
 
         <div className="text-center">
