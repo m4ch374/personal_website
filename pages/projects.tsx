@@ -7,12 +7,11 @@ import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import proj from "../public/project_meta.json"
 import ImagePrefix from "../helpers/ImagePrefix";
+import MiniModel from "../components/MiniModel";
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
   const uniProjectsArray = proj.university_project
-
-  const prefix = ImagePrefix()
 
   return (
     <div>
@@ -24,7 +23,7 @@ const Projects: NextPage = () => {
       </Head>
       
       <ContentContainer className="gap-10">
-        <div className="mt-[70px] relative w-[400px] h-[240px] lg:h-[280px] lg:w-[480px] bg-cover transition-all" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
+        <MiniModel />
 
         <Paragraph title="Personal & University Projects">
           These are my Personal & University Projects. As much as I would love to provide the 

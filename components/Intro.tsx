@@ -53,7 +53,13 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         </svg>
       </div>
 
-      <img src={imagePath} width="200px" height="200px" alt="introImg" className="relative rounded-full z-[3] shadow-lg" />
+      <img src={imagePath} 
+        width="200px" 
+        height="200px" 
+        alt="introImg" 
+        draggable={false} 
+        className="relative rounded-full z-[3] shadow-lg" 
+      />
     </div>
   )
 }

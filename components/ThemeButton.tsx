@@ -9,7 +9,6 @@ const ThemeButton: React.FC = () => {
 
   useEffect(() => {
     const scrollTheme = isDark ? '#1c1c1c' : '#FAF7F0'
-    console.log(isDark)
 
     document.body.style.setProperty('--scrollbar-background', scrollTheme)
   }, [isDark])
