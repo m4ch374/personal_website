@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import ImagePrefix from "../helpers/ImagePrefix";
 
 const MiniModel: React.FC = () => {
   const containerRef: React.RefObject<HTMLElement> | any = useRef(null)
@@ -30,36 +32,34 @@ const MiniModel: React.FC = () => {
 
       renderer.setSize(containerWidth, containerHeight)
       renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.outputEncoding = THREE.sRGBEncoding
+      container.appendChild(renderer.domElement)
 
       // Setup Scene and Camera
-      const origin = new THREE.Vector3(0, 0, 0)
+      const origin = new THREE.Vector3(0, 20, 0)
       const scene = new THREE.Scene()
       const camera = new THREE.PerspectiveCamera(
-        70,
+        40,
         containerWidth / containerHeight,
         1,
         1000
       )
-      camera.position.setZ(40)
-      camera.position.setY(25)
+      camera.position.set(30, 40, 50)
       camera.lookAt(origin)
 
-      container.appendChild(renderer.domElement)
-
-      // Add items to scene
-      const geometry = new THREE.BoxGeometry(30, 30, 30)
-      const material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, wireframe: true})
-      const box = new THREE.Mesh(geometry, material)
-      scene.add(box)
+      // Add lighting
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1)
+      scene.add(ambientLight)
 
       // Include orbital controls
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.target = origin
       controls.autoRotate = true
-      controls.autoRotateSpeed = 2.5
+      controls.autoRotateSpeed = 1
       controls.enableDamping = true
       controls.dampingFactor = 0.06
 
+      // anim
       let animFrame: any = null
       const animate = () => {
         animFrame = requestAnimationFrame(animate)
@@ -69,8 +69,22 @@ const MiniModel: React.FC = () => {
         renderer.render(scene, camera)
       }
 
+      // Handle resizing
       addEventListener("resize", handleResize)
-      animate()
+      
+      // load and play model
+      const loader = new GLTFLoader()
+      const prefix = ImagePrefix()
+      loader.load(prefix + '/model/howel_breakfast.glb', (gltf) => {
+        const model = gltf.scene
+        model.position.set(0, 20, 0)
+        model.scale.set(20, 20, 20)
+        model.rotation.y -= 30
+
+        scene.add(model)
+
+        animate()
+      }, undefined, (e) => console.error(e))
 
       return () => {
         cancelAnimationFrame(animFrame)
@@ -79,7 +93,7 @@ const MiniModel: React.FC = () => {
         removeEventListener("resize", handleResize)
       }
     }
-  }, [])
+  }, [handleResize])
 
   return (
     <div className="
