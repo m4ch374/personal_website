@@ -20,6 +20,27 @@ const MiniModel: React.FC = () => {
   useEffect(() => {
     const container: HTMLElement | null = containerRef.current
 
+    // initial values
+    const prefix = ImagePrefix()
+
+    // For the model => howel_breakfast (from Howel's moving castle) 
+    // Can't decide between this and the other one
+    //
+    // const cameraPos = new THREE.Vector3(0, 5, 12)
+    // const origin = new THREE.Vector3(0, 0, 0)
+    // const modelPos = new THREE.Vector3(3, 0, 0)
+    // const modelScale = 5
+    // const modelRotationOffset = 0
+    // const modelPath = prefix + '/model/howel_breakfast.glb'
+
+    // For model => laptop.glb
+    const cameraPos = new THREE.Vector3(0, 4, 12)
+    const origin = new THREE.Vector3(0, 0, 0)
+    const modelPos = new THREE.Vector3(-2, -2, 0)
+    const modelScale = 1
+    const modelRotationOffset = 11
+    const modelPath = prefix + '/model/laptop.glb'
+
     if (container) {
       // Setup Renderer
       const containerWidth = container.clientWidth
@@ -36,7 +57,6 @@ const MiniModel: React.FC = () => {
       container.appendChild(renderer.domElement)
 
       // Setup Scene and Camera
-      const origin = new THREE.Vector3(0, 20, 0)
       const scene = new THREE.Scene()
       const camera = new THREE.PerspectiveCamera(
         40,
@@ -44,7 +64,7 @@ const MiniModel: React.FC = () => {
         1,
         1000
       )
-      camera.position.set(30, 40, 50)
+      camera.position.set(cameraPos.x, cameraPos.y, cameraPos.z)
       camera.lookAt(origin)
 
       // Add lighting
@@ -74,12 +94,11 @@ const MiniModel: React.FC = () => {
       
       // load and play model
       const loader = new GLTFLoader()
-      const prefix = ImagePrefix()
-      loader.load(prefix + '/model/howel_breakfast.glb', (gltf) => {
+      loader.load(modelPath, (gltf) => {
         const model = gltf.scene
-        model.position.set(0, 20, 0)
-        model.scale.set(20, 20, 20)
-        model.rotation.y -= 30
+        model.position.set(modelPos.x, modelPos.y, modelPos.z)
+        model.scale.setScalar(modelScale)
+        model.rotation.y += modelRotationOffset
 
         scene.add(model)
 
