@@ -1,4 +1,4 @@
-import React, { DOMElement, useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
@@ -19,7 +19,7 @@ const MiniModel: React.FC = () => {
     const container: HTMLElement | null = containerRef.current
 
     if (container) {
-      console.log("hi")
+      // Setup Renderer
       const containerWidth = container.clientWidth
       const containerHeight = container.clientHeight
 
@@ -31,6 +31,8 @@ const MiniModel: React.FC = () => {
       renderer.setSize(containerWidth, containerHeight)
       renderer.setPixelRatio(window.devicePixelRatio)
 
+      // Setup Scene and Camera
+      const origin = new THREE.Vector3(0, 0, 0)
       const scene = new THREE.Scene()
       const camera = new THREE.PerspectiveCamera(
         70,
@@ -39,29 +41,24 @@ const MiniModel: React.FC = () => {
         1000
       )
       camera.position.setZ(40)
-      camera.position.setY(30)
-      camera.lookAt(new THREE.Vector3(0, 0, 0))
+      camera.position.setY(25)
+      camera.lookAt(origin)
 
       container.appendChild(renderer.domElement)
 
-      const geometry = new THREE.BoxGeometry(20, 20, 20)
-      const material = new THREE.MeshStandardMaterial({color: 0xcccccc})
+      // Add items to scene
+      const geometry = new THREE.BoxGeometry(30, 30, 30)
+      const material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, wireframe: true})
       const box = new THREE.Mesh(geometry, material)
       scene.add(box)
 
-      const light = new THREE.AmbientLight(0xcccccc, 0.9)
-      scene.add(light)
-
-      const pointLight = new THREE.PointLight(0xcccccc, 1)
-      pointLight.position.set(30, 30, 5)
-      scene.add(pointLight)
-
+      // Include orbital controls
       const controls = new OrbitControls(camera, renderer.domElement)
-      controls.target = new THREE.Vector3(0, 0, 0)
+      controls.target = origin
       controls.autoRotate = true
+      controls.autoRotateSpeed = 2.5
       controls.enableDamping = true
       controls.dampingFactor = 0.06
-      controls.enablePan = false
 
       let animFrame: any = null
       const animate = () => {
