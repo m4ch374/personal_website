@@ -6,12 +6,16 @@ import LinkButton from "../components/LinkButton";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import proj from "../public/project_meta.json"
-import ImagePrefix from "../helpers/ImagePrefix";
-import MiniModel from "../components/MiniModel";
+import dynamic from "next/dynamic";
+import { ModelLoadPlaceholder } from "../components/MiniModelContainer";
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
   const uniProjectsArray = proj.university_project
+
+  const LazyLoadModel = dynamic(() => import('../components/MiniModel'), {
+    loading: () => <ModelLoadPlaceholder />,
+  })
 
   return (
     <div>
@@ -23,7 +27,7 @@ const Projects: NextPage = () => {
       </Head>
       
       <ContentContainer className="gap-10">
-        <MiniModel />
+        <LazyLoadModel />
 
         <Paragraph title="Personal & University Projects">
           These are some of my Personal & University Projects. As much as I would love to provide the 

@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import ImagePrefix from "../helpers/ImagePrefix";
+import MiniModelContainer from "./MiniModelContainer";
 
 const MiniModel: React.FC = () => {
   const containerRef: React.RefObject<HTMLElement> | any = useRef(null)
@@ -115,16 +116,7 @@ const MiniModel: React.FC = () => {
   }, [handleResize])
 
   return (
-    <div className="
-      w-[366px] 
-      h-[240px] 
-      lg:h-[380px] 
-      lg:w-[580px] 
-      mt-[70px]
-      bg-[#F9F3DF]
-      dark:bg-[#1c1c1c]
-      " 
-    ref={containerRef} />
+    <MiniModelContainer containerRef={containerRef} />
   )
 }
 
