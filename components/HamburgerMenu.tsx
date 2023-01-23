@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import ClickedMenu from "./ClickedMenu";
 
 const HamburgerStroke: React.FC = () => {
@@ -37,18 +37,18 @@ const HamburgerMenu: React.FC = () => {
   const [clicked, setClicked] = useState(false)
   const elem: React.LegacyRef<HTMLDivElement> = useRef(null)
 
-  useEffect(() => {
-    const handleClick = (event: Event) => {
-      if (elem.current && !elem.current.contains(event.target as Node)) {
-        setClicked(false)
-      }
+  const handleClick = useCallback((event: Event) => {
+    if (elem.current && !elem.current.contains(event.target as Node)) {
+      setClicked(false)
     }
+  }, [elem])
 
+  useEffect(() => {
     addEventListener('click', handleClick)
     return (() => {
       removeEventListener('click', handleClick)
     })
-  }, [elem])
+  }, [handleClick])
 
   return (
     <div ref={elem} onClick={() => setClicked((clicked) => !clicked)} 
