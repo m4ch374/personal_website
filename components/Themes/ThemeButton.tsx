@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import ImagePrefix from "../helpers/ImagePrefix";
+import ImagePrefix from "../../helpers/ImagePrefix";
 import { motion } from "framer-motion";
 import { ThemeContext } from "./ThemeProvider";
 

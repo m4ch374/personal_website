@@ -2,8 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import ImagePrefix from "../helpers/ImagePrefix";
-import HamburgerMenu from "./HamburgerMenu";
-import ThemeButton from "./ThemeButton";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import ThemeButton from "./Themes/ThemeButton";
 
 interface IMenuBarBtn {
   children?: string | JSX.Element,

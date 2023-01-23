@@ -3,17 +3,17 @@ import Head from "next/head";
 import ContentContainer from "../components/ContentContainer";
 import Paragraph from "../components/Paragraph";
 import LinkButton from "../components/LinkButton";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectShowcase/ProjectCard";
 import Section from "../components/Section";
 import proj from "../public/project_meta.json"
 import dynamic from "next/dynamic";
-import { ModelLoadPlaceholder } from "../components/MiniModelContainer";
+import { ModelLoadPlaceholder } from "../components/MiniModel/MiniModelContainer";
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
   const uniProjectsArray = proj.university_project
 
-  const LazyLoadModel = dynamic(() => import('../components/MiniModel'), {
+  const LazyLoadModel = dynamic(() => import('../components/MiniModel/MiniModel'), {
     loading: () => <ModelLoadPlaceholder />,
   })
 

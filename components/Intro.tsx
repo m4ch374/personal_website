@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Section from "./Section";
-import { ThemeContext } from "./ThemeProvider";
+import { ThemeContext } from "./Themes/ThemeProvider";
 
 interface IIntroImage {
   imagePath?: string

@@ -2,7 +2,7 @@ import React from "react";
 import MenuBar from "./MenuBar";
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter } from "next/router"
-import ThemeProvider from "./ThemeProvider";
+import ThemeProvider from "./Themes/ThemeProvider";
 
 interface ILayout {
   children?: string | JSX.Element | JSX.Element[]

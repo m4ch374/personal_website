@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import ImagePrefix from "../helpers/ImagePrefix";
+import ImagePrefix from "../../helpers/ImagePrefix";
 import MiniModelContainer from "./MiniModelContainer";
 
 const MiniModel: React.FC = () => {
