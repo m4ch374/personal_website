@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Section from "./Section";
 import { ThemeContext } from "./Themes/ThemeProvider";
+import { motion } from "framer-motion";
 
 interface IIntroImage {
   imagePath?: string
@@ -8,9 +9,10 @@ interface IIntroImage {
 
 const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
   const isDark = useContext(ThemeContext)[0]
+  const dragConstraints = useRef(null)
 
   return (
-    <div className="relative">
+    <div className="relative grid place-items-center">
       <div className="absolute -top-[90px] -left-[80px] w-[370px] h-[370px] z-[2]">
         <svg version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
@@ -53,12 +55,18 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         </svg>
       </div>
 
-      <img src={imagePath} 
+      <div className="absolute w-[250px] h-[250px] rounded-full" ref={dragConstraints} />
+      <motion.img src={imagePath} 
         width="200px" 
         height="200px" 
         alt="introImg" 
         draggable={false} 
         className="relative rounded-full z-[3] shadow-lg" 
+        drag
+        dragConstraints={dragConstraints}
+        dragSnapToOrigin
+        dragElastic={0.15}
+        whileDrag={{zIndex: 10, scale: 1.1, boxShadow: "0px 10px 20px 5px rgba(0, 0, 0, 0.3)"}}
       />
     </div>
   )
