@@ -6,15 +6,15 @@ import ImagePrefix from "../helpers/ImagePrefix";
 import MiniModelContainer from "./MiniModelContainer";
 
 const MiniModel: React.FC = () => {
-  const containerRef: React.RefObject<HTMLElement> | any = useRef(null)
+  const containerRef: React.LegacyRef<HTMLDivElement> = useRef(null)
 
-  let renderer: THREE.WebGLRenderer | any = null
+  let renderer: THREE.WebGLRenderer | null = null
 
   const handleResize = useCallback(() => {
     const container: HTMLElement | null = containerRef.current
 
     if (container) {
-      renderer.setSize(container.clientWidth, container.clientHeight)
+      renderer?.setSize(container.clientWidth, container.clientHeight)
     }
   }, [])
 
@@ -87,7 +87,7 @@ const MiniModel: React.FC = () => {
 
         controls.update()
 
-        renderer.render(scene, camera)
+        renderer?.render(scene, camera)
       }
 
       // Handle resizing
@@ -108,8 +108,8 @@ const MiniModel: React.FC = () => {
 
       return () => {
         cancelAnimationFrame(animFrame)
-        renderer.domElement.remove()
-        renderer.dispose()
+        renderer?.domElement.remove()
+        renderer?.dispose()
         removeEventListener("resize", handleResize)
       }
     }

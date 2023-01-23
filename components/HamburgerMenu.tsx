@@ -35,11 +35,11 @@ const HamburgerMenuIcon: React.FC = () => {
 
 const HamburgerMenu: React.FC = () => {
   const [clicked, setClicked] = useState(false)
-  const elem: any = useRef(null)
+  const elem: React.LegacyRef<HTMLDivElement> = useRef(null)
 
   useEffect(() => {
     const handleClick = (event: Event) => {
-      if (elem.current && !elem.current.contains(event.target)) {
+      if (elem.current && !elem.current.contains(event.target as Node)) {
         setClicked(false)
       }
     }
