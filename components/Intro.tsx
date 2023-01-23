@@ -97,6 +97,7 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         dragSnapToOrigin
         dragElastic={0.1}
         whileDrag={{zIndex: 10, scale: 1.1, boxShadow: "0px 10px 20px 5px rgba(0, 0, 0, 0.3)"}}
+        dragTransition={{bounceDamping: 90, bounceStiffness: 200}}
         style={{x: dragX, y: dragY}}
       />
     </div>
