@@ -5,10 +5,10 @@ import Intro from '../components/Intro'
 import Paragraph from '../components/Paragraph'
 import LinkButton from '../components/LinkButton'
 import InlineSection from '../components/InlineSection'
-import ImagePrefix from '../helpers/ImagePrefix'
+import getPrefix from '../helpers/getPrefix'
 
 const Home: NextPage = () => {
-  const prefix = ImagePrefix()
+  const prefix = getPrefix()
 
   return (
     <div>

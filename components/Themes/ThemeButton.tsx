@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import ImagePrefix from "../../helpers/ImagePrefix";
+import getPrefix from "../../helpers/getPrefix";
 import { motion } from "framer-motion";
 import { ThemeContext } from "./ThemeProvider";
 
 const ThemeButton: React.FC = () => {
-  const prefix = ImagePrefix()
+  const prefix = getPrefix()
   const [isDark, toggleDark]:any = useContext(ThemeContext)
 
   useEffect(() => {

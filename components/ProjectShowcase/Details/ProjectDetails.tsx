@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectMeta } from "../../../pages/projects";
-import ImagePrefix from "../../../helpers/ImagePrefix";
+import getPrefix from "../../../helpers/getPrefix";
 import { motion } from "framer-motion";
 import LinkButton from "../../LinkButton"
 import ProjectDetailsBackground from "./ProjectDetailsBackground";
@@ -11,7 +11,7 @@ interface IProjectDetails {
 }
 
 const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => {
-  const prefix = ImagePrefix()
+  const prefix = getPrefix()
   const avalible = projectMeta.projectUrl!=="N/A"
 
   const popIn = {

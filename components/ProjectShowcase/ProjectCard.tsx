@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImagePrefix from "../../helpers/ImagePrefix";
+import getPrefix from "../../helpers/getPrefix";
 import { ProjectMeta } from "../../pages/projects";
 import { AnimatePresence } from "framer-motion"
 import ProjectDetails from "./Details/ProjectDetails";
@@ -10,7 +10,7 @@ interface IProjectCard {
 
 const ProjectCard: React.FC<IProjectCard> = ({projectDetail}) => {
   const [popped, setPopped] = useState(false)
-  const prefix = ImagePrefix()
+  const prefix = getPrefix()
 
   return (
     <div className="grid grid-flow-row place-items-center w-[40vw] lg:w-[270px]">

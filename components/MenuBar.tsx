@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import ImagePrefix from "../helpers/ImagePrefix";
+import getPrefix from "../helpers/getPrefix";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import ThemeButton from "./Themes/ThemeButton";
 
@@ -53,7 +53,7 @@ const MenuBarBtn: React.FC<IMenuBarBtn> = ({children, className, href="/", id=""
 }
 
 const MenuBar: React.FC = () => {
-  const prefix = ImagePrefix()
+  const prefix = getPrefix()
 
   return (
     <div className="backdrop-blur-[8px] 

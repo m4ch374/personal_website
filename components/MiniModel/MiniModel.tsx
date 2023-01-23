@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import ImagePrefix from "../../helpers/ImagePrefix";
+import getPrefix from "../../helpers/getPrefix";
 import MiniModelContainer from "./MiniModelContainer";
 
 const MiniModel: React.FC = () => {
@@ -22,7 +22,7 @@ const MiniModel: React.FC = () => {
     const container: HTMLElement | null = containerRef.current
 
     // initial values
-    const prefix = ImagePrefix()
+    const prefix = getPrefix()
 
     // For the model => howel_breakfast (from Howel's moving castle) 
     // Can't decide between this and the other one

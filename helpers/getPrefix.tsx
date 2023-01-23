@@ -1,7 +1,7 @@
 const isProd = process.env.NODE_ENV === 'production'
 
-const ImagePrefix: Function = () => {
+const getPrefix: Function = () => {
   return isProd ? "/personal_website" : ""
 }
 
-export default ImagePrefix
+export default getPrefix
