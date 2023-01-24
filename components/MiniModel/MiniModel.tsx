@@ -38,6 +38,7 @@ const MiniModel: React.FC = () => {
     const cameraPos = new THREE.Vector3(0, 4, 12)
     const origin = new THREE.Vector3(0, 0, 0)
     const modelPos = new THREE.Vector3(-2, -2, 0)
+    const pointLightPos = new THREE.Vector3(10, 10, 10)
     const modelScale = 1
     const modelRotationOffset = 11
     const modelPath = prefix + '/model/laptop.glb'
@@ -71,6 +72,9 @@ const MiniModel: React.FC = () => {
       // Add lighting
       const ambientLight = new THREE.AmbientLight(0xffffff, 1)
       scene.add(ambientLight)
+      const pointLight = new THREE.PointLight(0xffffff, 1)
+      pointLight.position.set(pointLightPos.x, pointLightPos.y, pointLightPos.z)
+      scene.add(pointLight)
 
       // Include orbital controls
       const controls = new OrbitControls(camera, renderer.domElement)
