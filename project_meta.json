@@ -69,7 +69,7 @@
         {
             "thumbnail": "/seams.png",
             "name": "UNSW Seams",
-            "description": "A backend for a chat webapp, basically a crappy Discord clone",
+            "description": "A backend for a chat webapp, basically a Discord spinoff",
             "features":[
                 "An online chatting platform",
                 "Group chats & DMs",
