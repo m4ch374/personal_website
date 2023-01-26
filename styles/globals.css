@@ -9,6 +9,39 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Umunu', sans-serif;
-  background-color: #1c1c1c;
-  color: white;
+  background-color: #F9F3DF;
+  color: #202020;
+
+  --scrollbar-background: #1c1c1c;
+}
+
+/* Scrollbar customisation */
+body::-webkit-scrollbar {
+  width: 12px;
+  background: var(--scrollbar-background);
+}
+
+body::-webkit-scrollbar-track {
+  margin-block: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #999999;
+  border: 4px solid var(--scrollbar-background);
+  border-radius: 100vw;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #757575;
+}
+
+/* Custom tailwind styles */
+@layer utilities {
+  .width-menu {
+    width: min(100vw, 700px);
+  }
+
+  .place-self-x-end {
+    place-self: center end;
+  }
 }

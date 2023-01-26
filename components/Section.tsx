@@ -7,7 +7,15 @@ interface ISection {
 
 const Section: React.FC<ISection> = ({className, children}) => {
   return (
-    <div className={`min-w-0 sm:w-[90vw] lg:w-[800px] px-[80px] grid grid-flow-row ${className}`}>
+    <div className={`min-w-0 
+      w-[400px] 
+      lg:w-[680px] 
+      grid 
+      grid-flow-row 
+      transition-all
+      duration-200
+      ease-in-out
+      ${className}`}>
       {children}
     </div>
   )

@@ -3,16 +3,19 @@ import Head from "next/head";
 import ContentContainer from "../components/ContentContainer";
 import Paragraph from "../components/Paragraph";
 import LinkButton from "../components/LinkButton";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectShowcase/ProjectCard";
 import Section from "../components/Section";
 import proj from "../public/project_meta.json"
-import ImagePrefix from "../helpers/ImagePrefix";
+import dynamic from "next/dynamic";
+import { ModelLoadPlaceholder } from "../components/MiniModel/MiniModelContainer";
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
   const uniProjectsArray = proj.university_project
 
-  const prefix = ImagePrefix()
+  const LazyLoadModel = dynamic(() => import('../components/MiniModel/MiniModel'), {
+    loading: () => <ModelLoadPlaceholder />,
+  })
 
   return (
     <div>
@@ -24,12 +27,12 @@ const Projects: NextPage = () => {
       </Head>
       
       <ContentContainer className="gap-10">
-        <div className="mt-[70px] relative w-[400px] h-[240px] md:h-[280px] md:w-[480px] bg-cover" style={{"backgroundImage": `url(${prefix}/mountain.png)`}} />
+        <LazyLoadModel />
 
         <Paragraph title="Personal & University Projects">
-          These are my Personal & University Projects. As much as I would love to provide the 
-          source code for every project that I&apos;ve made, I&apos;m unable to provide the code for university 
-          projects as UNSW does not allow it.
+          These are some of my Personal & University Projects. As much as I would love to provide the 
+          source code for every project that I&apos;ve made, the university 
+          won&apos;t be happy if I open sourced my university projects. Truly unfortunate :(
         </Paragraph>
         
         <LinkButton href="https://github.com/m4ch374"> Github &rarr; </LinkButton>

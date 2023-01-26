@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website
 
-## Getting Started
+## :book: Description
+A personal portfolio website, which includes:  
+* A small introduction of myself
+* Most of my personal projects
+* Some cool interactive features
 
-First, run the development server:
+#### Website link: https://m4ch374.github.io/personal_website/ 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## :earth_africa: Origin Story
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I have been quite interested in front-end programming for a while, but 
+one day, my friend, who was studying a front-end programming course at the time (late 2022), said this:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+> "You know, the course is kinda hard." - My friend
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+As somebody who's going studying the course next term (early 2023), I think to myself that it might be wise to start teaching myself `React` and `JavaScript`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+And I also needed a portfolio website. So I went straight into the rabbit hole and that's how this website was born.
 
-## Learn More
+## :pushpin: Stack
 
-To learn more about Next.js, take a look at the following resources:
+* [Next.js](https://nextjs.org/) - A `React` Framework
+* [TailwindCss](https://tailwindcss.com/) - The best way to write `CSS` (imo)
+* [Framer Motion](https://www.framer.com/motion/) - A motion library for `React` 
+* [three.js](https://threejs.org/) - A JavaScript 3D library 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## :beers: Credits
+* [Laptop Model](https://sketchfab.com/3d-models/voxel-web-development-50ad959d6c6b4799806c45bfa46ca550) made by [Diego G.](https://sketchfab.com/empty_mirror)

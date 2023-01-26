@@ -43,6 +43,7 @@ const MyButton: React.FC<ILinkButton> = ({ children, href, avalible=true, classN
   
   return (
     <div className={`${className} group`}>
+<<<<<<< HEAD
       <motion.div
         variants={btnAnim}
         whileTap="tap">
@@ -62,6 +63,25 @@ const MyButton: React.FC<ILinkButton> = ({ children, href, avalible=true, classN
               {children}
           </a>
       </motion.div>
+=======
+      <a className={`text-2xl 
+        bg-[#84DFFF]
+        hover:bg-[#56d2ff]
+        dark:bg-purple-400  
+        dark:hover:bg-purple-500
+        px-5 
+        py-2 
+        rounded-lg 
+        transition-colors 
+        duration-200 
+        ${avalible ? "cursor-pointer" : "cursor-not-allowed"}`}
+        href={href} 
+        target="_blank"
+        rel="noreferrer"
+        >
+          {children}
+      </a>
+>>>>>>> 748b3220c22e10f2d4c2294892db9fddff7fd513
 
         {avalible ? undefined : <MiniPopup />}
     </div>
