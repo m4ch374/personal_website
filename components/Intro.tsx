@@ -85,7 +85,7 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         </svg>
       </motion.div>
 
-      <div className="absolute w-[230px] h-[230px] rounded-full" ref={dragConstraints} />
+      <div className="absolute w-[250px] h-[250px] rounded-full" ref={dragConstraints} />
       <motion.img src={imagePath} 
         width="200px" 
         height="200px" 
@@ -95,7 +95,7 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         drag
         dragConstraints={dragConstraints}
         dragSnapToOrigin
-        dragElastic={0.1}
+        dragElastic={0.2}
         whileDrag={{zIndex: 10, scale: 1.1, boxShadow: "0px 10px 20px 5px rgba(0, 0, 0, 0.3)"}}
         dragTransition={{bounceDamping: 90, bounceStiffness: 200}}
         style={{x: dragX, y: dragY}}
