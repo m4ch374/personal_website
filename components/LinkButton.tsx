@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 
 const MiniPopup: React.FC = () => {
   return (
@@ -30,25 +31,39 @@ interface ILinkButton {
 }
 
 const MyButton: React.FC<ILinkButton> = ({ children, href, avalible=true, className }) => {
+  const btnAnim = {
+    tap: {
+      scale: 0.9,
+      transition: {
+        type:"tween",
+        duration: 0.2
+      }
+    }
+  }
+  
   return (
     <div className={`${className} group`}>
-      <a className={`text-2xl 
-        bg-purple-400  
-        px-5 
-        py-2 
-        rounded-lg 
-        transition-colors 
-        duration-200 
-        hover:bg-purple-500
-        ${avalible ? "cursor-pointer" : "cursor-not-allowed"}`}
-        href={href} 
-        target="_blank"
-        rel="noreferrer"
-        >
-          {children}
-      </a>
+      <motion.div
+        variants={btnAnim}
+        whileTap="tap">
+          <a className={`text-2xl 
+            bg-purple-400  
+            px-5 
+            py-2 
+            rounded-lg 
+            transition-colors 
+            duration-200 
+            hover:bg-purple-500
+            ${avalible ? "cursor-pointer" : "cursor-not-allowed"}`}
+            href={href} 
+            target="_blank"
+            rel="noreferrer"
+            >
+              {children}
+          </a>
+      </motion.div>
 
-      {avalible ? undefined : <MiniPopup />}
+        {avalible ? undefined : <MiniPopup />}
     </div>
   )
 }
