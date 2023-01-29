@@ -36,7 +36,6 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
     handlePosChange(dragY, setY)
   }, [handlePosChange])
 
-
   const transition = isDragRef.current ? {} : {
     type: "spring",
     stiffness: 100,
@@ -96,7 +95,7 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         height="200px" 
         alt="introImg" 
         draggable={false} 
-        className="relative rounded-full z-[3] shadow-lg" 
+        className="relative rounded-full z-[10] shadow-lg" 
         drag
         dragConstraints={{left: -80, right: 80, top: -80, bottom: 80}}
         dragSnapToOrigin
