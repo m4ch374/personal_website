@@ -9,40 +9,45 @@ interface IIntroImage {
 
 const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
   const isDark = useContext(ThemeContext)[0]
-  const dragConstraints = useRef(null)
+
+  const isDragRef = useRef(false)
 
   const dragX = useMotionValue(0)
   const dragY = useMotionValue(0)
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
 
-  const prevX = useRef(0)
-  const prevY = useRef(0)
   const handlePosChange = useCallback((
       tracker: MotionValue<number>, 
-      prevNum: React.MutableRefObject<number>,
       setter: Function
     ) => {
-    const threshold = 1.1
 
     tracker.onChange((latest) => {
-      if (Math.abs(latest - prevNum.current) > threshold) {
+      if (isDragRef.current) {
         setter(latest)
+      } else {
+        setter(0)
       }
-
-      prevNum.current = latest
     })
-  }, [])
+  }, [dragX.get(), dragY.get()])
   
   useEffect(() => {
-    handlePosChange(dragX, prevX, setX)
-    handlePosChange(dragY, prevY, setY)
-  }, [])
+    handlePosChange(dragX, setX)
+    handlePosChange(dragY, setY)
+  }, [handlePosChange])
+
+
+  const transition = isDragRef.current ? {} : {
+    type: "spring",
+    stiffness: 100,
+    damping: 100
+  }
 
   return (
     <div className="relative grid place-items-center">
       <motion.div className="absolute -top-[90px] -left-[80px] w-[370px] h-[370px] z-[2]"
-        animate={{x: x * 0.4, y: y * 0.5}}>
+        animate={{x: x * 0.6, y: y * 0.7}}
+        transition={transition}>
         <svg version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 500 500" 
@@ -64,7 +69,8 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
       </motion.div>
 
       <motion.div className="absolute -top-[130px] -left-[150px] w-[500px] h-[500px] z-[1]"
-        animate={{x: x * 0.2, y: y * 0.4}}>
+        animate={{x: x * 0.2, y: y * 0.4}}
+        transition={transition}>
         <svg version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 500 500" 
@@ -85,7 +91,6 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         </svg>
       </motion.div>
 
-      <div className="absolute w-[250px] h-[250px] rounded-full" ref={dragConstraints} />
       <motion.img src={imagePath} 
         width="200px" 
         height="200px" 
@@ -93,10 +98,12 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
         draggable={false} 
         className="relative rounded-full z-[3] shadow-lg" 
         drag
-        dragConstraints={dragConstraints}
+        dragConstraints={{left: -80, right: 80, top: -80, bottom: 80}}
         dragSnapToOrigin
-        dragElastic={0.2}
+        dragElastic={0.4}
         whileDrag={{zIndex: 10, scale: 1.1, boxShadow: "0px 10px 20px 5px rgba(0, 0, 0, 0.3)"}}
+        onDrag={() => isDragRef.current=true}
+        onDragEnd={() => isDragRef.current=false}
         dragTransition={{bounceDamping: 90, bounceStiffness: 200}}
         style={{x: dragX, y: dragY}}
       />
