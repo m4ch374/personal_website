@@ -34,8 +34,6 @@ const IntroImage: React.FC<IIntroImage> = ({imagePath}) => {
   useEffect(() => {
     handlePosChange(dragX, setX)
     handlePosChange(dragY, setY)
-
-    console.log(x)
   }, [handlePosChange])
 
   const transition = isDragRef.current ? { type: "spring" } : {
