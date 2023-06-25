@@ -52,17 +52,19 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
             <span className="text-3xl font-bold"> {decodeURI(projectMeta.name)} </span>
             <span className="text-xl"> {projectMeta.description}  </span>
             <hr className="border-gray-400/80" />
-            <div>
-              <span className="text-xl"> Features: </span>
-              <ul className="list-disc pl-[30px] text-base font-sans">
-                { projectMeta.features.map((feats: string) => <li key="key"> {feats} </li>) }
-              </ul>
-            </div>
-            <div className="absolute bottom-[5rem] text-base gap-4 inline-flex">
+            <div className="grid gap-2 h-[180px] overflow-auto">
               <div>
-                <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
+                <span className="text-xl"> Features: </span>
+                <ul className="list-disc pl-[30px] text-base font-sans">
+                  { projectMeta.features.map((feats: string) => <li key={feats}> {feats} </li>) }
+                </ul>
               </div>
-              <span className="font-sans text-base"> { projectMeta.stack.join(', ') } </span>
+              <div className="relative text-base gap-4 inline-flex">
+                <div>
+                  <span className="bg-purple-600/90 text-purple-200 px-2 rounded-md font-bold"> Stack </span>
+                </div>
+                <span className="font-sans text-base"> { projectMeta.stack.join(', ') } </span>
+              </div>
             </div>
             <LinkButton className="absolute bottom-8 right-0" href={avalible ? projectMeta.projectUrl : undefined } avalible={avalible}> Source &rarr; </LinkButton>
           </div>
