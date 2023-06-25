@@ -48,7 +48,42 @@
             "projectUrl": "https://github.com/m4ch374/ascyee"
         }
     ],
+    "cse_project": [
+        {
+
+        }
+    ],
     "university_project": [
+        {
+            "thumbnail": "/bigbrain.png",
+            "name": "Big brain",
+            "description": "A kahoot-like platform",
+            "features": [
+                "A kahoot-like platform",
+                "Users could create and join games",
+                "Includes mobile support"
+            ],
+            "stack": [
+                "Frontend: ReactJs, TailwindCSS, JavaScript",
+                "Backend: Nodejs, express, JavaScript"
+            ],
+            "projectUrl": "https://github.com/m4ch374/Big_Brain"
+        },
+        {
+            "thumbnail": "/lurk4work.png",
+            "name": "Lurk For Work",
+            "description": "A social media where people could post jobs",
+            "features": [
+                "A social media-esque application",
+                "Users could make post, follow others, like and comment",
+                "Includes mobile support"
+            ],
+            "stack": [
+                "Frontend: HTML, CSS, JS, Bootstrap",
+                "Backend: Nodejs, express, JavaScript"
+            ],
+            "projectUrl": "https://github.com/m4ch374/Lurk4Work"
+        },
         {
             "thumbnail": "/dungeon.png",
             "name": "Dungeon Mania",
@@ -64,7 +99,7 @@
                 "JSON",
                 "GSON"
             ],
-            "projectUrl": "N/A"
+            "projectUrl": "https://github.com/m4ch374/Dungeon_Mania_backend"
         },
         {
             "thumbnail": "/seams.png",
@@ -81,7 +116,7 @@
                 "JWT",
                 "JSON"
             ],
-            "projectUrl": "N/A"
+            "projectUrl": "https://github.com/m4ch374/UNSW_Seams_backend"
         }
     ]
 }
