@@ -50,7 +50,19 @@
     ],
     "cse_project": [
         {
-
+            "thumbnail": "/project_waves.png",
+            "name": "CSE Waves",
+            "description": "A platform to make origanizing meeting easier",
+            "features": [
+                "Users could organize meeting and see the overlapping free time",
+                "Follow other users and send them notifications",
+                "Profile customization"
+            ],
+            "stack": [
+                "Frontend: TypeScript, ReactJS, TailwindCSS",
+                "Backend: Nodejs, Express, tRPC, MongoDB"
+            ],
+            "projectUrl": "https://github.com/m4ch374/project_waves"
         }
     ],
     "university_project": [
