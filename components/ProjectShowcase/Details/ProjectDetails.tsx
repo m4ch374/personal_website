@@ -52,7 +52,7 @@ const ProjectDetails: React.FC<IProjectDetails> = ({setPopped, projectMeta}) => 
             <span className="text-3xl font-bold"> {decodeURI(projectMeta.name)} </span>
             <span className="text-xl"> {projectMeta.description}  </span>
             <hr className="border-gray-400/80" />
-            <div className="grid gap-2 h-[180px] overflow-auto">
+            <div className="grid gap-2 h-[180px] overflow-auto scrollbar-thin scrollbar-thumb-[#aaa]/80 scrollbar-thumb-rounded-full scrollbar-w-1">
               <div>
                 <span className="text-xl"> Features: </span>
                 <ul className="list-disc pl-[30px] text-base font-sans">
