@@ -11,6 +11,7 @@ import { ModelLoadPlaceholder } from "../components/MiniModel/MiniModelContainer
 
 const Projects: NextPage = () => {
   const projectsArray = proj.personal_projects
+  const cseProjectsArray = proj.cse_project
   const uniProjectsArray = proj.university_project
 
   const LazyLoadModel = dynamic(() => import('../components/MiniModel/MiniModel'), {
@@ -44,6 +45,14 @@ const Projects: NextPage = () => {
 
           <div className="flex justify-center flex-wrap pt-3 gap-8">
             { projectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
+          </div>
+        </Section>
+
+        <Section>
+          <span className="text-2xl"> Projects @UNSW_CSE </span>
+
+          <div className="flex justify-center flex-wrap pt-3 gap-8">
+            { cseProjectsArray.map((proj: ProjectMeta) => <ProjectCard key={proj.name} projectDetail={proj} />) }
           </div>
         </Section>
 
