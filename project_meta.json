@@ -63,6 +63,21 @@
                 "Backend: Nodejs, Express, tRPC, MongoDB"
             ],
             "projectUrl": "https://github.com/m4ch374/project_waves"
+        },
+        {
+            "thumbnail": "/cse_hackathon_2023.png",
+            "name": "OnlyGuests",
+            "description": "A traveller pairing system made for CSE Hackathon 2023",
+            "features": [
+                "Users could organize a travelling session to anywhere",
+                "Users could join an existing travelling session",
+                "Really nice looking front-end I guess"
+            ],
+            "stack": [
+                "Frontend: ReactJS, TailwindCSS, Typescript",
+                "Backend: Python"
+            ],
+            "projectUrl": "https://github.com/m4ch374/cse_hackachon_2023"
         }
     ],
     "university_project": [
