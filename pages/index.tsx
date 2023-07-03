@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           </InlineSection>
 
           <InlineSection title='Back End' titleClassName='bg-blue-700/80 px-1 mr-[24px] rounded-md text-blue-200'> 
-            Python, Java 
+            Python, Java, NodeJS 
           </InlineSection>
 
           <InlineSection title='Others' titleClassName='bg-purple-800/80 px-1 mr-[36px] rounded-md text-purple-200'>
