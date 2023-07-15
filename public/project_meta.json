@@ -50,6 +50,21 @@
     ],
     "cse_project": [
         {
+            "thumbnail": "/chaos.png",
+            "name": "CSE Chaos",
+            "description": "A CSESoc hiring and offers platform",
+            "features": [
+                "Users could create and join campaigns",
+                "Admins could read applications and contact applicants",
+                "Intuitive and easy to use UI"
+            ],
+            "stack": [
+                "Frontend: TypeScript, ReactJS, Twin Macro",
+                "Backend: Rest"
+            ],
+            "projectUrl": "https://github.com/csesoc/chaos"
+        },
+        {
             "thumbnail": "/project_waves.png",
             "name": "CSE Waves",
             "description": "A platform to make origanizing meeting easier",
