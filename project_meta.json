@@ -97,6 +97,22 @@
     ],
     "university_project": [
         {
+            "thumbnail": "/gigconnect.png",
+            "name": "GigConnect",
+            "description": "A B2C platform where companies could provide work for freelancers",
+            "features": [
+                "User could register as either Professional or Company User",
+                "Professional user could apply for freelance jobs that they are interested",
+                "Company user could post jobs for freelancers to work on",
+                "Administration features such as changing project status managing application and project team members"
+            ],
+            "stack": [
+                "Frontend: ReactJS, TailwindCSS, TypeScript, Framer Motion",
+                "Backend: TypeScript, NodeJS, ExpressJS, Prisma"
+            ],
+            "projectUrl": "https://github.com/unsw-cse-comp3900-9900-23T3/capstone-project-3900f11acockatoos"
+        },
+        {
             "thumbnail": "/bigbrain.png",
             "name": "Big brain",
             "description": "A kahoot-like platform",
